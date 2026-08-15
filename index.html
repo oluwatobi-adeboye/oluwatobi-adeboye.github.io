@@ -33,7 +33,7 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;width:10
 .btn-ghost{background:#fff;border:1px solid var(--edge);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
 
-/* HERO */
+/* HERO + DASHBOARD */
 #hero{padding:140px 0 60px}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
 h1{font-size:clamp(36px,4.4vw,56px);line-height:1.1;margin:18px 0 24px}
@@ -41,7 +41,7 @@ h1 em{color:var(--crimson);font-style:italic}
 .hero-sub{max-width:520px;color:var(--ink-soft);font-size:15.5px}
 .hero-ctas{display:flex;gap:12px;margin-top:28px}
 
-/* FEATURED TRAFFIC DASHBOARD (Updated with real SimilarWeb data) */
+/* FEATURED TRAFFIC DASHBOARD */
 .traffic-dash{
   background:#fff;
   border:1px solid var(--edge);
@@ -157,7 +157,7 @@ footer .wrap{display:flex;justify-content:space-between}
   </div>
 </nav>
 
-<!-- HERO + UPDATED TRAFFIC DASHBOARD -->
+<!-- HERO + TRAFFIC DASHBOARD -->
 <section id="hero">
   <div class="wrap hero-grid">
     <div>
@@ -170,7 +170,7 @@ footer .wrap{display:flex;justify-content:space-between}
       </div>
     </div>
 
-    <!-- UPDATED SIMILARWEB DASHBOARD -->
+    <!-- FEATURED TRAFFIC DASHBOARD -->
     <div class="traffic-dash">
       <div class="traffic-header">
         <span class="site">teenpatti.com</span>
@@ -179,9 +179,7 @@ footer .wrap{display:flex;justify-content:space-between}
       
       <div class="traffic-main">
         <div class="big">
-          <div>
-            <span class="num">237.3K</span>
-          </div>
+          <div><span class="num">237.3K</span></div>
           <div class="label">Monthly Visits</div>
         </div>
 
@@ -302,7 +300,7 @@ footer .wrap{display:flex;justify-content:space-between}
 </footer>
 
 <script>
-// Tabs + Projects
+// Tabs + Projects with real images
 const PROJECTS = {
   teenpatti: {label:'teenpatti.com', cards:[
     {market:'India · Card Game / iGaming', title:'Traffic Overview', sub:'237.3K monthly visits', img:'teenpatti-traffic.png', bullets:['237,300 monthly visits','50.32% bounce rate','2.44 pages per visit']},
