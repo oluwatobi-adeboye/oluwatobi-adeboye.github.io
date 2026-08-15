@@ -34,26 +34,56 @@ nav .wrap{display:flex;justify-content:space-between;align-items:center;width:10
 .btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
 
 /* HERO */
-#hero{padding:140px 0 80px}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
-h1{font-size:clamp(36px,4.4vw,58px);line-height:1.1;margin:18px 0 24px}
+#hero{padding:140px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+h1{font-size:clamp(36px,4.4vw,56px);line-height:1.1;margin:18px 0 24px}
 h1 em{color:var(--crimson);font-style:italic}
 .hero-sub{max-width:520px;color:var(--ink-soft);font-size:15.5px}
-.hero-ctas{display:flex;gap:12px;margin-top:32px}
+.hero-ctas{display:flex;gap:12px;margin-top:28px}
+
+/* TRAFFIC DASHBOARD - FEATURED */
+.traffic-dash{
+  background:#fff;
+  border:1px solid var(--edge);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 25px 60px -20px rgba(0,0,0,.12);
+}
+.traffic-header{
+  background:#111113;
+  color:#fff;
+  padding:14px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:13px;
+}
+.traffic-header .site{font-family:var(--mono);font-weight:600}
+.traffic-header .source{font-size:10px;opacity:.6}
+
+.traffic-main{padding:24px 22px 18px}
+.traffic-main .big{display:flex;align-items:baseline;gap:12px}
+.traffic-main .big .num{font-family:var(--serif);font-size:52px;line-height:1;font-weight:400}
+.traffic-main .big .label{font-size:13px;color:#666}
+
+.traffic-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--edge);margin-top:18px;border-radius:8px;overflow:hidden}
+.traffic-stats .stat{padding:14px 12px;text-align:center;background:#fff}
+.traffic-stats .stat .v{font-family:var(--serif);font-size:19px;font-weight:500}
+.traffic-stats .stat .l{font-size:10px;color:#888;margin-top:2px}
+
+.traffic-sources{padding:20px 22px 22px;border-top:1px solid var(--edge);margin-top:10px}
+.traffic-sources h4{font-size:12px;font-weight:600;margin-bottom:14px;color:#444}
+.src-row{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13px}
+.src-row .name{width:70px;color:#555}
+.src-row .bar{flex:1;height:7px;background:#f0ede6;border-radius:99px;overflow:hidden}
+.src-row .bar i{display:block;height:100%;background:var(--crimson);border-radius:99px;transition:width 1.2s ease}
+.src-row .pct{width:52px;text-align:right;font-family:var(--mono);font-size:12px;font-weight:600}
 
 /* SECTIONS */
 section{padding:90px 0}
 .sec-hd{display:flex;gap:18px;margin-bottom:48px}
 .sec-hd .n{color:var(--crimson);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;padding-top:6px}
 .sec-hd h2{font-size:34px}
-
-/* SKILLS */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:12px;overflow:hidden}
-.skill{background:var(--surface);padding:28px 26px}
-.skill h3{font-size:15px;margin-bottom:8px}
-.skill p{color:var(--ink-soft);font-size:14px;line-height:1.65}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.tag{font-family:var(--mono);font-size:9px;padding:2px 8px;border:1px solid var(--edge);border-radius:4px;color:var(--ink-muted)}
 
 /* RESULTS */
 .tabs{display:flex;border:1px solid var(--edge);border-radius:10px;overflow:hidden;width:fit-content;margin-bottom:30px}
@@ -69,12 +99,10 @@ section{padding:90px 0}
 .pc-body li{padding-left:18px;position:relative;margin-bottom:8px;font-size:14px;color:var(--ink-soft)}
 .pc-body li::before{content:'→';position:absolute;left:0;color:var(--crimson)}
 
-/* MARKETS */
 .mw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
 .mw-card{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:20px}
 .mw-card .flag{font-size:22px;margin-bottom:8px}
 
-/* EXPERIENCE */
 .tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
 .tl{position:relative;padding-left:26px}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--edge)}
@@ -83,7 +111,6 @@ section{padding:90px 0}
 .tl-role{font-weight:600}
 .tl-co{color:var(--crimson);font-size:14px;margin:2px 0 10px}
 
-/* TOOLS */
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .prof .row{margin-bottom:16px}
 .prof .row .head{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}
@@ -93,7 +120,6 @@ section{padding:90px 0}
 .mini-stats .m{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:14px;text-align:center}
 .mini-stats .m b{font-size:22px;display:block}
 
-/* CONTACT - FIXED CONTRAST */
 #contact{background:#111113;color:#fff}
 #contact h2{color:#fff}
 #contact .sec-hd p{color:#aaa}
@@ -107,11 +133,9 @@ section{padding:90px 0}
 .ct-panel li::before{content:'→';position:absolute;left:0;color:#ff2f6b}
 .ct-panel .btn{width:100%;margin-top:20px;justify-content:center;background:#e6134c;color:#fff}
 
-/* FOOTER */
 footer{background:#111113;color:#666;padding:20px 0;font-size:12px}
 footer .wrap{display:flex;justify-content:space-between}
 
-/* UTILITIES */
 .reveal{opacity:0;transform:translateY(20px);transition:all .6s ease}
 .reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.hero-grid,.tools-grid,.ct-grid,.tl-grid{grid-template-columns:1fr}.nav-links{display:none}}
@@ -133,7 +157,7 @@ footer .wrap{display:flex;justify-content:space-between}
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO + TRAFFIC DASHBOARD -->
 <section id="hero">
   <div class="wrap hero-grid">
     <div>
@@ -143,6 +167,39 @@ footer .wrap{display:flex;justify-content:space-between}
       <div class="hero-ctas">
         <a href="#proof" class="btn btn-primary">See real results</a>
         <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+
+    <!-- FEATURED TRAFFIC DASHBOARD -->
+    <div class="traffic-dash">
+      <div class="traffic-header">
+        <span class="site">teenpatti.com</span>
+        <span class="source">SimilarWeb • Last 30 days</span>
+      </div>
+      
+      <div class="traffic-main">
+        <div class="big">
+          <div>
+            <span class="num">87.7K</span>
+          </div>
+          <div class="label">Total Visits</div>
+        </div>
+
+        <div class="traffic-stats">
+          <div class="stat"><div class="v">63.3K</div><div class="l">Unique Visitors</div></div>
+          <div class="stat"><div class="v">6.18</div><div class="l">Pages / Visit</div></div>
+          <div class="stat"><div class="v">13:47</div><div class="l">Avg Duration</div></div>
+          <div class="stat"><div class="v">33.66%</div><div class="l">Bounce Rate</div></div>
+        </div>
+      </div>
+
+      <div class="traffic-sources">
+        <h4>Traffic Sources</h4>
+        <div class="src-row"><span class="name">Direct</span><span class="bar"><i style="width:83.41%"></i></span><span class="pct">83.41%</span></div>
+        <div class="src-row"><span class="name">Search</span><span class="bar"><i style="width:14.6%"></i></span><span class="pct">14.6%</span></div>
+        <div class="src-row"><span class="name">Social</span><span class="bar"><i style="width:1.87%"></i></span><span class="pct">1.87%</span></div>
+        <div class="src-row"><span class="name">Referral</span><span class="bar"><i style="width:0%"></i></span><span class="pct">0%</span></div>
+        <div class="src-row"><span class="name">Paid</span><span class="bar"><i style="width:0%"></i></span><span class="pct">0%</span></div>
       </div>
     </div>
   </div>
@@ -191,7 +248,7 @@ footer .wrap{display:flex;justify-content:space-between}
 <!-- TOOLS -->
 <section id="tools" class="alt">
   <div class="wrap">
-    <div class="sec-hd"><span class="n">05</span><div><h2>Tools &amp; stack</h2><p style="color:#666;margin-top:8px">The full toolkit across research, execution, reporting, and domain acquisition.</p></div></div>
+    <div class="sec-hd"><span class="n">05</span><div><h2>Tools &amp; stack</h2></div></div>
     <div class="tools-grid">
       <div>
         <div class="prof" id="prof"></div>
@@ -245,7 +302,7 @@ footer .wrap{display:flex;justify-content:space-between}
 </footer>
 
 <script>
-// Tabs + Projects with images
+// Tabs + Projects
 const PROJECTS = {
   teenpatti: {label:'teenpatti.com', cards:[
     {market:'India · Card Game / iGaming', title:'Traffic Overview', sub:'87.7K monthly visits', img:'teenpatti-traffic.png', bullets:['87,700 monthly visits','63,300 unique visitors','33.66% bounce rate']},
