@@ -6,174 +6,489 @@
 <title>Oluwatobi Adébóyè — Senior iGaming SEO Specialist</title>
 <meta name="description" content="Senior iGaming SEO Specialist with 5+ years scaling betting and gaming brands across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ink:#0D0D0F; --ink-soft:#3A3A44; --ink-muted:#7A7A8A;
-  --paper:#F8F8FA; --surface:#FFFFFF; --edge:#E4E4EC;
-  --gold:#B8922A; --gold-light:#F5E6C0;
-  --green:#1A7A4A; --green-dim:#D4F0E3;
-  --r:6px;
-  --mono:'JetBrains Mono',monospace;
+  --ink:#0D0D0F;
+  --ink-soft:#3A3A44;
+  --ink-muted:#7A7A8A;
+  --paper:#F8F8FA;
+  --surface:#FFFFFF;
+  --edge:#E4E4EC;
+  --gold:#B8922A;
+  --gold-deep:#8F7018;
+  --gold-light:#F5E6C0;
+  --gold-wash:rgba(184,146,42,.08);
+  --green:#1A7A4A;
+  --green-dim:#D4F0E3;
+  --r:8px;
+  --r-lg:16px;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
   --serif:'DM Serif Display',Georgia,serif;
   --sans:'Inter',system-ui,sans-serif;
+  --shadow-sm:0 1px 2px rgba(13,13,15,.04);
+  --shadow:0 8px 28px rgba(13,13,15,.06), 0 1px 3px rgba(13,13,15,.04);
+  --shadow-lg:0 24px 64px rgba(13,13,15,.10), 0 4px 12px rgba(13,13,15,.04);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--gold-light);color:var(--ink)}
+
+/* grain overlay */
+body::before{
+  content:'';
+  pointer-events:none;
+  position:fixed;inset:0;z-index:200;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* progress */
+#progress{
+  position:fixed;top:0;left:0;height:2px;z-index:120;
+  background:linear-gradient(90deg,var(--gold),#d4b056);
+  width:0;transform-origin:left;
+  box-shadow:0 0 12px rgba(184,146,42,.45);
+}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,248,250,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge);height:56px;display:flex;align-items:center;padding:0 clamp(20px,5vw,80px);justify-content:space-between}
-.nav-brand{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.05em}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{font-size:13px;font-weight:500;color:var(--ink-muted);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(24px,5vw,80px);
+  background:rgba(248,248,250,.78);
+  backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,background .3s,box-shadow .3s;
+}
+nav.scrolled{
+  border-bottom-color:var(--edge);
+  background:rgba(248,248,250,.92);
+  box-shadow:0 1px 0 rgba(13,13,15,.03);
+}
+.nav-brand{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  color:var(--ink);text-decoration:none;letter-spacing:.14em;
+  display:flex;align-items:center;gap:10px;
+}
+.nav-mark{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--ink);color:var(--gold);
+  display:grid;place-items:center;
+  font-family:var(--serif);font-size:12px;font-style:italic;
+  flex-shrink:0;
+}
+.nav-links{display:flex;gap:4px;list-style:none}
+.nav-links a{
+  font-size:13px;font-weight:500;color:var(--ink-muted);
+  text-decoration:none;padding:7px 12px;border-radius:6px;
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(13,13,15,.04)}
 
 /* WRAP */
-.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,5vw,80px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(24px,5vw,80px)}
 
 /* HERO */
-#hero{padding:140px clamp(20px,5vw,80px) 80px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-.eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);display:inline-block}
-h1{font-family:var(--serif);font-size:clamp(34px,3.8vw,54px);line-height:1.13;font-weight:400;margin-bottom:22px}
-h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:16px;line-height:1.7;color:var(--ink-soft);margin-bottom:32px;max-width:500px}
+#hero{
+  position:relative;
+  padding:168px clamp(24px,5vw,80px) 100px;
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center;
+}
+#hero::before{
+  content:'';
+  position:absolute;top:80px;right:-8%;
+  width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,146,42,.09) 0%,transparent 68%);
+  pointer-events:none;
+}
+.eyebrow{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  color:var(--gold);letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:22px;display:inline-flex;align-items:center;gap:12px;
+}
+.eyebrow::before{content:'';width:28px;height:1.5px;background:var(--gold)}
+h1{
+  font-family:var(--serif);
+  font-size:clamp(38px,4.4vw,62px);
+  line-height:1.08;font-weight:400;letter-spacing:-.018em;
+  margin-bottom:26px;
+}
+h1 em{font-style:italic;color:var(--gold);position:relative}
+.hero-sub{
+  font-size:16.5px;line-height:1.75;color:var(--ink-soft);
+  margin-bottom:36px;max-width:520px;font-weight:400;
+}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn-dark{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;padding:11px 22px;border-radius:var(--r);font-size:13px;font-weight:500;text-decoration:none;transition:background .2s,transform .15s}
-.btn-dark:hover{background:#2a2a35;transform:translateY(-1px)}
-.btn-out{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--ink);padding:11px 22px;border-radius:var(--r);border:1px solid var(--edge);font-size:13px;font-weight:500;text-decoration:none;transition:border-color .2s,transform .15s}
-.btn-out:hover{border-color:var(--ink);transform:translateY(-1px)}
+.btn-dark{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ink);color:#fff;
+  padding:13px 24px;border-radius:var(--r);
+  font-size:13.5px;font-weight:500;text-decoration:none;
+  transition:background .2s,transform .18s,box-shadow .18s;
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset, 0 8px 20px rgba(13,13,15,.18);
+}
+.btn-dark:hover{background:#22222c;transform:translateY(-2px);box-shadow:0 12px 28px rgba(13,13,15,.22)}
+.btn-dark svg,.btn-out svg{width:14px;height:14px}
+.btn-out{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);color:var(--ink);
+  padding:13px 24px;border-radius:var(--r);
+  border:1px solid var(--edge);
+  font-size:13.5px;font-weight:500;text-decoration:none;
+  transition:border-color .2s,transform .18s,box-shadow .18s;
+}
+.btn-out:hover{border-color:#c8c8d2;transform:translateY(-2px);box-shadow:var(--shadow)}
 
 /* STAT PANEL */
-.stat-panel{background:var(--surface);border:1px solid var(--edge);border-radius:12px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-.stat{padding:22px 24px;border-bottom:1px solid var(--edge);border-right:1px solid var(--edge)}
+.stat-panel{
+  background:var(--surface);
+  border:1px solid var(--edge);
+  border-radius:var(--r-lg);
+  display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.stat-panel::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  border-radius:inherit;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
+}
+.stat{
+  padding:26px 28px;
+  border-bottom:1px solid var(--edge);
+  border-right:1px solid var(--edge);
+  transition:background .25s;
+}
+.stat:hover{background:var(--gold-wash)}
 .stat:nth-child(2n){border-right:none}
 .stat:nth-last-child(-n+2){border-bottom:none}
-.stat-n{font-family:var(--serif);font-size:36px;line-height:1;color:var(--ink);margin-bottom:3px}
+.stat-n{
+  font-family:var(--serif);font-size:40px;line-height:1;
+  color:var(--ink);margin-bottom:6px;letter-spacing:-.02em;
+}
 .stat-n b{color:var(--gold);font-weight:400}
-.stat-l{font-size:12px;color:var(--ink-muted);font-weight:500;line-height:1.4}
-.badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;font-weight:600;color:var(--green);background:var(--green-dim);padding:2px 6px;border-radius:3px;margin-top:5px;letter-spacing:.04em}
+.stat-l{font-size:12.5px;color:var(--ink-muted);font-weight:500;line-height:1.45}
+.badge{
+  display:inline-flex;align-items:center;gap:4px;
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  color:var(--green);background:var(--green-dim);
+  padding:3px 7px;border-radius:4px;margin-top:10px;letter-spacing:.04em;
+}
 
 /* SECTIONS */
-section{padding:88px 0}
-.sec-hd{display:flex;align-items:flex-start;gap:18px;margin-bottom:52px}
-.sec-n{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.1em;padding-top:5px;min-width:28px}
-h2{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);font-weight:400;line-height:1.2}
-.sec-sub{font-size:15px;color:var(--ink-muted);margin-top:7px;max-width:540px}
+section{padding:104px 0;position:relative}
+.sec-hd{display:flex;align-items:flex-start;gap:20px;margin-bottom:56px}
+.sec-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;
+  color:var(--gold);letter-spacing:.12em;padding-top:10px;min-width:32px;
+}
+h2{
+  font-family:var(--serif);
+  font-size:clamp(28px,3vw,42px);
+  font-weight:400;line-height:1.15;letter-spacing:-.015em;
+}
+.sec-sub{font-size:15.5px;color:var(--ink-muted);margin-top:10px;max-width:560px;line-height:1.65}
 
 /* EXPERTISE */
-#expertise{background:var(--surface);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
-.xgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:10px;overflow:hidden}
-.xcell{background:var(--surface);padding:28px 24px}
-.xicon{width:34px;height:34px;background:var(--gold-light);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:14px}
-.xcell h3{font-size:14px;font-weight:600;margin-bottom:7px}
-.xcell p{font-size:13px;color:var(--ink-muted);line-height:1.55}
-.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
-.tag{font-family:var(--mono);font-size:9px;color:var(--ink-soft);background:var(--paper);border:1px solid var(--edge);padding:2px 7px;border-radius:3px;font-weight:600;letter-spacing:.03em}
+#expertise{
+  background:var(--surface);
+  border-top:1px solid var(--edge);
+  border-bottom:1px solid var(--edge);
+}
+.xgrid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+}
+.xcell{
+  background:var(--paper);
+  border:1px solid var(--edge);
+  border-radius:12px;
+  padding:28px 26px;
+  transition:transform .25s,box-shadow .25s,border-color .25s,background .25s;
+}
+.xcell:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+  border-color:#d4d4de;
+  background:var(--surface);
+}
+.xicon{
+  width:40px;height:40px;
+  background:var(--gold-light);
+  border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+}
+.xcell h3{font-size:15px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+.xcell p{font-size:13.5px;color:var(--ink-muted);line-height:1.6}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:16px}
+.tag{
+  font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);
+  background:var(--surface);border:1px solid var(--edge);
+  padding:3px 8px;border-radius:4px;font-weight:600;letter-spacing:.03em;
+}
 
-/* PROOF GRID */
+/* PROOF */
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.proof-card{background:var(--surface);border:1px solid var(--edge);border-radius:10px;overflow:hidden}
+.proof-card{
+  background:var(--surface);
+  border:1px solid var(--edge);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:transform .28s,box-shadow .28s;
+}
+.proof-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .proof-card.wide{grid-column:1/-1}
-.pc-top{padding:22px 24px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
-.pc-market{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
-.pc-top h3{font-family:var(--serif);font-size:18px;font-weight:400}
-.pc-top p{font-size:13px;color:var(--ink-muted);margin-top:3px}
-.pc-nums{display:flex;gap:18px;flex-shrink:0}
+.pc-top{
+  padding:24px 26px;
+  border-bottom:1px solid var(--edge);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;
+}
+.pc-market{
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  color:var(--gold);letter-spacing:.13em;text-transform:uppercase;margin-bottom:8px;
+}
+.pc-top h3{font-family:var(--serif);font-size:20px;font-weight:400;letter-spacing:-.01em}
+.pc-top p{font-size:13px;color:var(--ink-muted);margin-top:4px}
+.pc-nums{display:flex;gap:22px;flex-shrink:0}
 .pc-num{text-align:right}
-.pc-num-n{font-family:var(--serif);font-size:24px;line-height:1;color:var(--green)}
-.pc-num-l{font-size:10px;color:var(--ink-muted);font-weight:500;margin-top:2px}
-.pc-img{width:100%;border-bottom:1px solid var(--edge);background:var(--paper)}
+.pc-num-n{font-family:var(--serif);font-size:26px;line-height:1;color:var(--green);letter-spacing:-.02em}
+.pc-num-l{font-size:10.5px;color:var(--ink-muted);font-weight:500;margin-top:3px}
+.pc-img{width:100%;border-bottom:1px solid var(--edge);background:#f0f0f4}
 .pc-img img{width:100%;display:block}
-.pc-body{padding:18px 24px}
-.pc-body ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-.pc-body li{font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;line-height:1.5}
+.pc-body{padding:20px 26px}
+.pc-body ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.pc-body li{
+  font-size:13.5px;color:var(--ink-soft);padding-left:16px;
+  position:relative;line-height:1.55;
+}
 .pc-body li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
 .wide .pc-body-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.wide .pc-body-col{padding:18px 24px;border-right:1px solid var(--edge)}
+.wide .pc-body-col{padding:20px 26px;border-right:1px solid var(--edge)}
 .wide .pc-body-col:last-child{border-right:none}
-.wide .pc-body-col h4{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--ink-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.wide .pc-body-col h4{
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  color:var(--ink-muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;
+}
 
-/* PROJECT TABS */
-.proj-tabs{display:flex;gap:0;border:1px solid var(--edge);border-radius:8px;overflow:hidden;margin-bottom:24px;width:fit-content}
-.proj-tab{font-size:13px;font-weight:500;padding:9px 20px;background:var(--surface);color:var(--ink-muted);cursor:pointer;border:none;border-right:1px solid var(--edge);font-family:var(--sans);transition:background .15s,color .15s}
+/* TABS */
+.proj-tabs{
+  display:flex;gap:0;
+  border:1px solid var(--edge);border-radius:10px;
+  overflow:hidden;margin-bottom:28px;width:fit-content;
+  background:var(--surface);box-shadow:var(--shadow-sm);
+}
+.proj-tab{
+  font-size:13px;font-weight:500;padding:10px 20px;
+  background:transparent;color:var(--ink-muted);
+  cursor:pointer;border:none;border-right:1px solid var(--edge);
+  font-family:var(--sans);transition:background .18s,color .18s;
+}
 .proj-tab:last-child{border-right:none}
+.proj-tab:hover:not(.active){color:var(--ink);background:var(--paper)}
 .proj-tab.active{background:var(--ink);color:#fff}
 .proj-section{display:none}
-.proj-section.active{display:block}
+.proj-section.active{display:block;animation:fadeUp .35s ease}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:none}
+}
 
 /* MARKETS */
-.mw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.mw-card{background:var(--surface);border:1px solid var(--edge);border-radius:8px;padding:18px 20px}
-.mw-flag{font-size:22px;margin-bottom:8px}
-.mw-country{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px}
-.mw-detail{font-size:12px;color:var(--ink-muted);line-height:1.4}
+#markets{background:var(--surface);border-top:1px solid var(--edge)}
+.mw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mw-card{
+  background:var(--paper);
+  border:1px solid var(--edge);
+  border-radius:12px;
+  padding:22px 22px 20px;
+  transition:transform .22s,box-shadow .22s,border-color .22s,background .22s;
+}
+.mw-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+  border-color:#d4d4de;
+  background:var(--surface);
+}
+.mw-flag{font-size:24px;margin-bottom:10px;line-height:1}
+.mw-country{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
+.mw-detail{font-size:12.5px;color:var(--ink-muted);line-height:1.5}
 
 /* TIMELINE */
-#experience{background:var(--surface);border-top:1px solid var(--edge)}
-.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.tl{position:relative;padding-left:24px}
-.tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--edge)}
-.tl-item{position:relative;padding-bottom:36px}
+#experience{background:var(--paper)}
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.tl{position:relative;padding-left:28px}
+.tl::before{
+  content:'';position:absolute;left:4px;top:10px;bottom:10px;width:1px;
+  background:linear-gradient(var(--gold),var(--edge) 40%,var(--edge));
+}
+.tl-item{position:relative;padding-bottom:40px}
 .tl-item:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-30px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--gold)}
-.tl-dot.current{background:var(--gold)}
-.tl-date{font-family:var(--mono);font-size:10px;color:var(--ink-muted);font-weight:600;letter-spacing:.05em;margin-bottom:3px}
-.tl-role{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:1px}
-.tl-co{font-size:13px;color:var(--gold);font-weight:500;margin-bottom:9px}
-.tl-ul{list-style:none;display:flex;flex-direction:column;gap:5px}
-.tl-ul li{font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;line-height:1.5}
-.tl-ul li::before{content:'·';position:absolute;left:0;color:var(--gold);font-size:18px;line-height:1;top:-1px}
-.current-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-dim);color:var(--green);font-family:var(--mono);font-size:9px;font-weight:600;padding:2px 8px;border-radius:3px;margin-left:8px;letter-spacing:.04em;vertical-align:middle}
+.tl-dot{
+  position:absolute;left:-28px;top:5px;
+  width:10px;height:10px;border-radius:50%;
+  background:var(--surface);border:2px solid var(--gold);
+  box-shadow:0 0 0 4px var(--paper);
+}
+.tl-dot.current{
+  background:var(--gold);
+  box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(184,146,42,.18);
+}
+.tl-date{
+  font-family:var(--mono);font-size:10.5px;color:var(--ink-muted);
+  font-weight:600;letter-spacing:.06em;margin-bottom:5px;
+}
+.tl-role{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:2px;letter-spacing:-.015em}
+.tl-co{font-size:13.5px;color:var(--gold);font-weight:500;margin-bottom:12px}
+.tl-ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.tl-ul li{
+  font-size:13.5px;color:var(--ink-soft);padding-left:14px;
+  position:relative;line-height:1.55;
+}
+.tl-ul li::before{content:'·';position:absolute;left:0;color:var(--gold);font-size:20px;line-height:1;top:-2px}
+.current-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  background:var(--green-dim);color:var(--green);
+  font-family:var(--mono);font-size:9px;font-weight:600;
+  padding:2px 8px;border-radius:4px;margin-left:8px;
+  letter-spacing:.05em;vertical-align:middle;
+}
 .current-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 
 /* TOOLS */
-.tools-g{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.tool-box{background:var(--surface);border:1px solid var(--edge);border-radius:8px;padding:18px 20px}
-.tool-box h4{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
-.tool-box ul{list-style:none;display:flex;flex-direction:column;gap:5px}
-.tool-box li{font-size:13px;color:var(--ink-soft)}
+#tools{background:var(--surface);border-top:1px solid var(--edge)}
+.tools-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tool-box{
+  background:var(--paper);
+  border:1px solid var(--edge);
+  border-radius:12px;
+  padding:22px 22px 20px;
+  transition:transform .22s,box-shadow .22s,background .22s;
+}
+.tool-box:hover{transform:translateY(-2px);box-shadow:var(--shadow);background:var(--surface)}
+.tool-box h4{
+  font-family:var(--mono);font-size:9.5px;font-weight:600;
+  color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;
+}
+.tool-box ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.tool-box li{
+  font-size:13.5px;color:var(--ink-soft);
+  padding-left:12px;position:relative;
+}
+.tool-box li::before{
+  content:'';position:absolute;left:0;top:8px;
+  width:5px;height:5px;border-radius:50%;
+  background:var(--gold-light);border:1px solid var(--gold);
+}
 
 /* CONTACT */
-#contact{background:#0C0C0F}
+#contact{background:#0C0C0F;position:relative;overflow:hidden}
+#contact::before{
+  content:'';position:absolute;top:-120px;right:-80px;
+  width:480px;height:480px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,146,42,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
 #contact h2,#contact .sec-n{color:#fff}
-#contact .sec-sub{color:rgba(255,255,255,.45)}
-.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-.avail{display:inline-flex;align-items:center;gap:8px;background:rgba(26,122,74,.25);border:1px solid rgba(26,122,74,.4);padding:9px 14px;border-radius:6px;font-size:13px;color:#5ae08a;font-weight:500;margin-bottom:24px}
-.dot{width:7px;height:7px;border-radius:50%;background:#5ae08a;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.ct-rows{display:flex;flex-direction:column;gap:14px}
-.ct-row{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,.6)}
-.ct-icon{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+#contact .sec-sub{color:rgba(255,255,255,.42)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.avail{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(26,122,74,.18);
+  border:1px solid rgba(90,224,138,.28);
+  padding:10px 16px;border-radius:8px;
+  font-size:13px;color:#5ae08a;font-weight:500;margin-bottom:28px;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:#5ae08a;animation:pulse 2s infinite;box-shadow:0 0 8px #5ae08a}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.ct-rows{display:flex;flex-direction:column;gap:6px}
+.ct-row{
+  display:flex;align-items:center;gap:14px;
+  font-size:14.5px;color:rgba(255,255,255,.58);
+  padding:10px 12px;border-radius:8px;
+  transition:background .2s;
+}
+.ct-row:hover{background:rgba(255,255,255,.04)}
+.ct-icon{
+  width:34px;height:34px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;flex-shrink:0;
+  background:rgba(255,255,255,.03);
+}
 .ct-row a{color:var(--gold);text-decoration:none}
 .ct-row a:hover{text-decoration:underline}
-.ct-panel{padding:28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px}
-.ct-panel h3{font-family:var(--serif);font-size:20px;color:#fff;font-weight:400;margin-bottom:14px}
-.ct-panel ul{list-style:none;display:flex;flex-direction:column;gap:11px}
-.ct-panel li{font-size:13px;color:rgba(255,255,255,.55);padding-left:18px;position:relative;line-height:1.55}
+.ct-panel{
+  padding:32px;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  backdrop-filter:blur(8px);
+}
+.ct-panel h3{font-family:var(--serif);font-size:22px;color:#fff;font-weight:400;margin-bottom:18px}
+.ct-panel ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.ct-panel li{
+  font-size:13.5px;color:rgba(255,255,255,.52);
+  padding-left:18px;position:relative;line-height:1.6;
+}
 .ct-panel li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
 
-footer{background:#07070A;padding:20px clamp(20px,5vw,80px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
+footer{
+  background:#07070A;
+  padding:22px clamp(24px,5vw,80px);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer p{font-size:11px;color:rgba(255,255,255,.22);font-family:var(--mono);letter-spacing:.04em}
 
+/* reveal */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  #hero,.tl-grid,.ct-grid,.tools-g{grid-template-columns:1fr}
+  .xgrid,.mw-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:768px){
-  #hero{grid-template-columns:1fr;padding-top:96px}
+  #hero{grid-template-columns:1fr;padding-top:120px;gap:40px}
   .xgrid,.proof-grid,.mw-grid,.tl-grid,.tools-g,.ct-grid{grid-template-columns:1fr}
   .proof-card.wide{grid-column:auto}
   .wide .pc-body-grid{grid-template-columns:1fr}
   .wide .pc-body-col{border-right:none;border-bottom:1px solid var(--edge)}
   .nav-links{display:none}
   .pc-top{flex-direction:column}
-  section{padding:60px 0}
+  section{padding:72px 0}
   .proj-tabs{width:100%;overflow-x:auto}
+  h1{font-size:36px}
 }
 </style>
 </head>
 <body>
+<div id="progress"></div>
 
 <nav>
-  <a class="nav-brand" href="#">OLUWATOBI ADÉBÓYÈ</a>
+  <a class="nav-brand" href="#">
+    <span class="nav-mark">Ó</span>
+    OLUWATOBI ADÉBÓYÈ
+  </a>
   <ul class="nav-links">
     <li><a href="#expertise">Skills</a></li>
     <li><a href="#proof">Results</a></li>
@@ -184,16 +499,19 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
 
 <!-- HERO -->
 <div id="hero">
-  <div>
+  <div class="reveal">
     <div class="eyebrow">Senior iGaming SEO Specialist</div>
     <h1>Ranking betting &amp; gaming brands in the <em>markets that matter</em></h1>
     <p class="hero-sub">5+ years building search dominance for iGaming operators and affiliates across India, Nigeria, the Philippines, Cyprus, Indonesia, Pakistan and the Netherlands. Technical execution. Off-page authority. Organic traffic that converts to players.</p>
     <div class="ctas">
-      <a class="btn-dark" href="#proof">See Real Results</a>
+      <a class="btn-dark" href="#proof">
+        See Real Results
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
       <a class="btn-out" href="#contact">Get in Touch</a>
     </div>
   </div>
-  <div class="stat-panel">
+  <div class="stat-panel reveal">
     <div class="stat">
       <div class="stat-n">87<b>.7K</b></div>
       <div class="stat-l">Monthly visits — iGaming card game brand</div>
@@ -220,7 +538,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
 <!-- EXPERTISE -->
 <section id="expertise">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">01</div>
       <div>
         <h2>Core skills</h2>
@@ -228,37 +546,37 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
     <div class="xgrid">
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">⚙️</div>
         <h3>Technical SEO</h3>
         <p>Full site audits, Core Web Vitals, crawl efficiency, IndexNow implementation, JS rendering, and mobile-first compliance for high-traffic betting properties.</p>
         <div class="tags"><span class="tag">Screaming Frog</span><span class="tag">GSC</span><span class="tag">CWV</span><span class="tag">Schema</span><span class="tag">IndexNow</span></div>
       </div>
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">🔗</div>
         <h3>Authority & Link Building</h3>
         <p>Strategic domain portfolio acquisition, backlink profile development, and off-page authority architecture for regulated and competitive iGaming niches.</p>
         <div class="tags"><span class="tag">Ahrefs</span><span class="tag">Majestic</span><span class="tag">Domain acquisition</span></div>
       </div>
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">🎯</div>
         <h3>iGaming Content Strategy</h3>
         <p>E-E-A-T frameworks for betting operators and affiliates — keyword research, topical authority, and localised content for Asian and African markets.</p>
         <div class="tags"><span class="tag">SEMrush</span><span class="tag">Semantic SEO</span><span class="tag">E-E-A-T</span></div>
       </div>
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">📈</div>
         <h3>Affiliate & Operator SEO</h3>
         <p>Deep understanding of CPA, RevShare, and hybrid deal structures — organic strategy that connects directly to FTD volume for operators and networks.</p>
         <div class="tags"><span class="tag">FTD optimisation</span><span class="tag">CPA</span><span class="tag">Affiliate SEO</span></div>
       </div>
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">🌍</div>
         <h3>Multi-Market SEO</h3>
         <p>Operated across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands — adapting strategy to each market's regulatory and cultural context.</p>
         <div class="tags"><span class="tag">Hreflang</span><span class="tag">Geo-targeting</span><span class="tag">Local SEO</span></div>
       </div>
-      <div class="xcell">
+      <div class="xcell reveal">
         <div class="xicon">🤖</div>
         <h3>AI & GEO</h3>
         <p>Generative Engine Optimisation (GEO) — optimising iGaming platforms for visibility in AI search summaries, LLM engines, and ChatGPT citations alongside traditional Google rankings.</p>
@@ -271,7 +589,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
 <!-- PROOF -->
 <section id="proof">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">02</div>
       <div>
         <h2>Real results</h2>
@@ -279,7 +597,6 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
 
-    <!-- PROJECT TABS -->
     <div class="proj-tabs">
       <button class="proj-tab active" onclick="showProject('teenpatti')">teenpatti.com</button>
       <button class="proj-tab" onclick="showProject('teenpattistars')">Teenpatti Stars</button>
@@ -287,7 +604,6 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       <button class="proj-tab" onclick="showProject('current')">Current GSC</button>
     </div>
 
-    <!-- TEENPATTI.COM -->
     <div class="proj-section active" id="proj-teenpatti">
       <div class="proof-grid">
         <div class="proof-card">
@@ -336,7 +652,6 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
 
-    <!-- TEENPATTISTARS -->
     <div class="proj-section" id="proj-teenpattistars">
       <div class="proof-grid">
         <div class="proof-card">
@@ -404,7 +719,6 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
 
-    <!-- TRAFFICBETS / UU7STARS -->
     <div class="proj-section" id="proj-trafficbets">
       <div class="proof-grid">
         <div class="proof-card wide">
@@ -424,17 +738,17 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
             <div class="pc-body-col">
               <h4>Trafficbets</h4>
               <ul class="pc-body" style="padding:0">
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5">DR grew from 2 to 26 within days — rapid authority build via targeted link acquisition campaign</li>
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">235 referring domains established, +140 new domains in the tracked window</li>
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">Projects: Starsuu7, UU7Game, Starsuu7 Real Cash — Teen Patti and Rummy brands targeting India</li>
+                <li>DR grew from 2 to 26 within days — rapid authority build via targeted link acquisition campaign</li>
+                <li>235 referring domains established, +140 new domains in the tracked window</li>
+                <li>Projects: Starsuu7, UU7Game, Starsuu7 Real Cash — Teen Patti and Rummy brands targeting India</li>
               </ul>
             </div>
             <div class="pc-body-col">
               <h4>Uu7stars</h4>
               <ul class="pc-body" style="padding:0">
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5">DR 47 — well-established iGaming domain authority</li>
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">1,100 referring domains (+118 new) — sustained link acquisition across the engagement</li>
-                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">Organic traffic and keywords growing actively — player acquisition via organic channel</li>
+                <li>DR 47 — well-established iGaming domain authority</li>
+                <li>1,100 referring domains (+118 new) — sustained link acquisition across the engagement</li>
+                <li>Organic traffic and keywords growing actively — player acquisition via organic channel</li>
               </ul>
             </div>
           </div>
@@ -442,7 +756,6 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
 
-    <!-- CURRENT GSC -->
     <div class="proj-section" id="proj-current">
       <div class="proof-grid">
         <div class="proof-card wide">
@@ -469,14 +782,13 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- MARKETS -->
-<section id="markets" style="background:var(--surface);border-top:1px solid var(--edge)">
+<section id="markets">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">03</div>
       <div>
         <h2>Markets worked in</h2>
@@ -484,42 +796,42 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
     <div class="mw-grid">
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇮🇳</div>
         <div class="mw-country">India</div>
         <div class="mw-detail">Rummy, Teen Patti, card game verticals. teenpatti.com (DR 62, 87.7K visits) and Teenpatti Stars (156K GSC impressions).</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇳🇬</div>
         <div class="mw-country">Nigeria</div>
         <div class="mw-detail">Sports betting operators. Authority network for Nigerian betting SERPs. 4,934 keywords tracked across competitive betting terms.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇵🇭</div>
         <div class="mw-country">Philippines</div>
         <div class="mw-detail">iGaming agency work for Trafficbets. Multiple operator and affiliate brands across Teen Patti and Rummy verticals.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇮🇩</div>
         <div class="mw-country">Indonesia</div>
         <div class="mw-detail">Competitive gaming and betting verticals. Organic traffic strategy targeting Indonesian search audience.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇵🇰</div>
         <div class="mw-country">Pakistan</div>
         <div class="mw-detail">Card game and iGaming organic traffic. Pakistan was 3rd largest organic source for Teenpattistars.io.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇨🇾</div>
         <div class="mw-country">Cyprus</div>
         <div class="mw-detail">Contract with The Search Initiative. Domain acquisition and authority building for European iGaming operators.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🇳🇱</div>
         <div class="mw-country">Netherlands</div>
         <div class="mw-detail">European authority-driven SEO campaign across Dutch and European commercial markets.</div>
       </div>
-      <div class="mw-card">
+      <div class="mw-card reveal">
         <div class="mw-flag">🌍</div>
         <div class="mw-country">Kenya · Ghana · S. Africa</div>
         <div class="mw-detail">African sports betting operators. Content and link strategy for local betting audiences across three markets.</div>
@@ -531,7 +843,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">04</div>
       <div>
         <h2>Experience</h2>
@@ -540,8 +852,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
     </div>
     <div class="tl-grid">
       <div class="tl">
-
-        <div class="tl-item">
+        <div class="tl-item reveal">
           <div class="tl-dot current"></div>
           <div class="tl-date">JAN 2023 – PRESENT <span class="current-badge"><span class="current-dot"></span>CURRENT</span></div>
           <div class="tl-role">Senior SEO Consultant — iGaming</div>
@@ -552,8 +863,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
             <li>Delivering FTD-linked organic growth through intent-driven content and technical SEO strategy</li>
           </ul>
         </div>
-
-        <div class="tl-item">
+        <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">JUN 2025 – JUL 2026</div>
           <div class="tl-role">AI SEO Lead — Contract</div>
@@ -565,11 +875,9 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
             <li>17.9% avg CTR and position 7.4 across tracked iGaming keywords in GSC (Oct 2025–Jun 2026)</li>
           </ul>
         </div>
-
       </div>
       <div class="tl">
-
-        <div class="tl-item">
+        <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">OCT 2025 – JUL 2026</div>
           <div class="tl-role">Authority Network Specialist — Contract</div>
@@ -580,8 +888,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
             <li>Coordinated with content and technical SEO teams on link structure strategy</li>
           </ul>
         </div>
-
-        <div class="tl-item">
+        <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="tl-date">JUN 2022 – JAN 2024</div>
           <div class="tl-role">SEO Specialist</div>
@@ -594,16 +901,15 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
             <li>Directed team of SEO analysts across content and link acquisition workstreams</li>
           </ul>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
 <!-- TOOLS -->
-<section id="tools" style="background:var(--surface);border-top:1px solid var(--edge)">
+<section id="tools">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">05</div>
       <div>
         <h2>Tools &amp; stack</h2>
@@ -611,19 +917,19 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
     <div class="tools-g">
-      <div class="tool-box">
+      <div class="tool-box reveal">
         <h4>Analysis</h4>
         <ul><li>Ahrefs</li><li>SEMrush</li><li>Majestic</li><li>Google Search Console</li><li>Screaming Frog</li><li>Microsoft Clarity</li></ul>
       </div>
-      <div class="tool-box">
+      <div class="tool-box reveal">
         <h4>Execution</h4>
         <ul><li>WordPress</li><li>Schema Markup</li><li>IndexNow</li><li>Jasper AI</li><li>Basic HTML / CSS</li><li>Google Ads / PMax</li></ul>
       </div>
-      <div class="tool-box">
+      <div class="tool-box reveal">
         <h4>Reporting</h4>
         <ul><li>Google Analytics 4</li><li>Looker Studio</li><li>Google Sheets</li><li>Excel</li></ul>
       </div>
-      <div class="tool-box">
+      <div class="tool-box reveal">
         <h4>Domain Acquisition</h4>
         <ul><li>GoDaddy Auctions</li><li>SpamZilla</li><li>DomCop</li><li>Odys Global</li><li>DropCatch / NameJet</li><li>ExpiredDomains.net</li></ul>
       </div>
@@ -634,7 +940,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
-    <div class="sec-hd">
+    <div class="sec-hd reveal">
       <div class="sec-n">06</div>
       <div>
         <h2>Work together</h2>
@@ -642,7 +948,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
       </div>
     </div>
     <div class="ct-grid">
-      <div>
+      <div class="reveal">
         <div class="avail"><div class="dot"></div>Available — open to full-time, contract &amp; relocation</div>
         <div class="ct-rows">
           <div class="ct-row"><div class="ct-icon">✉</div><a href="mailto:tbazz4real@gmail.com">tbazz4real@gmail.com</a></div>
@@ -652,7 +958,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
           <div class="ct-row"><div class="ct-icon">📍</div><span>Lagos, Nigeria · Nigerian passport · Open to visa sponsorship</span></div>
         </div>
       </div>
-      <div class="ct-panel">
+      <div class="ct-panel reveal">
         <h3>What I bring to a senior role</h3>
         <ul>
           <li>5+ years of iGaming-specific SEO — genuine vertical depth across operators, affiliates, and card game brands across 8+ countries</li>
@@ -677,6 +983,19 @@ function showProject(id) {
   document.getElementById('proj-' + id).classList.add('active');
   event.target.classList.add('active');
 }
+
+const nav = document.querySelector('nav');
+const bar = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+  nav.classList.toggle('scrolled', window.scrollY > 12);
+}, {passive:true});
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, {threshold: .12, rootMargin: '0px 0px -24px 0px'});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
