@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oluwatobi Adébóyè — Senior iGaming SEO Specialist</title>
+<meta name="description" content="Senior iGaming SEO Specialist with 5+ years scaling betting and gaming brands across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#0D0D0F; --ink-soft:#3A3A44; --ink-muted:#7A7A8A;
+  --paper:#F8F8FA; --surface:#FFFFFF; --edge:#E4E4EC;
+  --gold:#B8922A; --gold-light:#F5E6C0;
+  --green:#1A7A4A; --green-dim:#D4F0E3;
+  --r:6px;
+  --mono:'JetBrains Mono',monospace;
+  --serif:'DM Serif Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,248,250,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--edge);height:56px;display:flex;align-items:center;padding:0 clamp(20px,5vw,80px);justify-content:space-between}
+.nav-brand{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink);text-decoration:none;letter-spacing:.05em}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+
+/* WRAP */
+.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,5vw,80px)}
+
+/* HERO */
+#hero{padding:140px clamp(20px,5vw,80px) 80px;max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);display:inline-block}
+h1{font-family:var(--serif);font-size:clamp(34px,3.8vw,54px);line-height:1.13;font-weight:400;margin-bottom:22px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:16px;line-height:1.7;color:var(--ink-soft);margin-bottom:32px;max-width:500px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:#fff;padding:11px 22px;border-radius:var(--r);font-size:13px;font-weight:500;text-decoration:none;transition:background .2s,transform .15s}
+.btn-dark:hover{background:#2a2a35;transform:translateY(-1px)}
+.btn-out{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--ink);padding:11px 22px;border-radius:var(--r);border:1px solid var(--edge);font-size:13px;font-weight:500;text-decoration:none;transition:border-color .2s,transform .15s}
+.btn-out:hover{border-color:var(--ink);transform:translateY(-1px)}
+
+/* STAT PANEL */
+.stat-panel{background:var(--surface);border:1px solid var(--edge);border-radius:12px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.stat{padding:22px 24px;border-bottom:1px solid var(--edge);border-right:1px solid var(--edge)}
+.stat:nth-child(2n){border-right:none}
+.stat:nth-last-child(-n+2){border-bottom:none}
+.stat-n{font-family:var(--serif);font-size:36px;line-height:1;color:var(--ink);margin-bottom:3px}
+.stat-n b{color:var(--gold);font-weight:400}
+.stat-l{font-size:12px;color:var(--ink-muted);font-weight:500;line-height:1.4}
+.badge{display:inline-flex;align-items:center;gap:4px;font-family:var(--mono);font-size:9px;font-weight:600;color:var(--green);background:var(--green-dim);padding:2px 6px;border-radius:3px;margin-top:5px;letter-spacing:.04em}
+
+/* SECTIONS */
+section{padding:88px 0}
+.sec-hd{display:flex;align-items:flex-start;gap:18px;margin-bottom:52px}
+.sec-n{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--gold);letter-spacing:.1em;padding-top:5px;min-width:28px}
+h2{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);font-weight:400;line-height:1.2}
+.sec-sub{font-size:15px;color:var(--ink-muted);margin-top:7px;max-width:540px}
+
+/* EXPERTISE */
+#expertise{background:var(--surface);border-top:1px solid var(--edge);border-bottom:1px solid var(--edge)}
+.xgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:10px;overflow:hidden}
+.xcell{background:var(--surface);padding:28px 24px}
+.xicon{width:34px;height:34px;background:var(--gold-light);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px;margin-bottom:14px}
+.xcell h3{font-size:14px;font-weight:600;margin-bottom:7px}
+.xcell p{font-size:13px;color:var(--ink-muted);line-height:1.55}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:12px}
+.tag{font-family:var(--mono);font-size:9px;color:var(--ink-soft);background:var(--paper);border:1px solid var(--edge);padding:2px 7px;border-radius:3px;font-weight:600;letter-spacing:.03em}
+
+/* PROOF GRID */
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.proof-card{background:var(--surface);border:1px solid var(--edge);border-radius:10px;overflow:hidden}
+.proof-card.wide{grid-column:1/-1}
+.pc-top{padding:22px 24px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.pc-market{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.pc-top h3{font-family:var(--serif);font-size:18px;font-weight:400}
+.pc-top p{font-size:13px;color:var(--ink-muted);margin-top:3px}
+.pc-nums{display:flex;gap:18px;flex-shrink:0}
+.pc-num{text-align:right}
+.pc-num-n{font-family:var(--serif);font-size:24px;line-height:1;color:var(--green)}
+.pc-num-l{font-size:10px;color:var(--ink-muted);font-weight:500;margin-top:2px}
+.pc-img{width:100%;border-bottom:1px solid var(--edge);background:var(--paper)}
+.pc-img img{width:100%;display:block}
+.pc-body{padding:18px 24px}
+.pc-body ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.pc-body li{font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;line-height:1.5}
+.pc-body li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
+.wide .pc-body-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.wide .pc-body-col{padding:18px 24px;border-right:1px solid var(--edge)}
+.wide .pc-body-col:last-child{border-right:none}
+.wide .pc-body-col h4{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--ink-muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+
+/* PROJECT TABS */
+.proj-tabs{display:flex;gap:0;border:1px solid var(--edge);border-radius:8px;overflow:hidden;margin-bottom:24px;width:fit-content}
+.proj-tab{font-size:13px;font-weight:500;padding:9px 20px;background:var(--surface);color:var(--ink-muted);cursor:pointer;border:none;border-right:1px solid var(--edge);font-family:var(--sans);transition:background .15s,color .15s}
+.proj-tab:last-child{border-right:none}
+.proj-tab.active{background:var(--ink);color:#fff}
+.proj-section{display:none}
+.proj-section.active{display:block}
+
+/* MARKETS */
+.mw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mw-card{background:var(--surface);border:1px solid var(--edge);border-radius:8px;padding:18px 20px}
+.mw-flag{font-size:22px;margin-bottom:8px}
+.mw-country{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.mw-detail{font-size:12px;color:var(--ink-muted);line-height:1.4}
+
+/* TIMELINE */
+#experience{background:var(--surface);border-top:1px solid var(--edge)}
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.tl{position:relative;padding-left:24px}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--edge)}
+.tl-item{position:relative;padding-bottom:36px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-30px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--gold)}
+.tl-dot.current{background:var(--gold)}
+.tl-date{font-family:var(--mono);font-size:10px;color:var(--ink-muted);font-weight:600;letter-spacing:.05em;margin-bottom:3px}
+.tl-role{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:1px}
+.tl-co{font-size:13px;color:var(--gold);font-weight:500;margin-bottom:9px}
+.tl-ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.tl-ul li{font-size:13px;color:var(--ink-soft);padding-left:14px;position:relative;line-height:1.5}
+.tl-ul li::before{content:'·';position:absolute;left:0;color:var(--gold);font-size:18px;line-height:1;top:-1px}
+.current-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-dim);color:var(--green);font-family:var(--mono);font-size:9px;font-weight:600;padding:2px 8px;border-radius:3px;margin-left:8px;letter-spacing:.04em;vertical-align:middle}
+.current-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+
+/* TOOLS */
+.tools-g{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tool-box{background:var(--surface);border:1px solid var(--edge);border-radius:8px;padding:18px 20px}
+.tool-box h4{font-family:var(--mono);font-size:9px;font-weight:600;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.tool-box ul{list-style:none;display:flex;flex-direction:column;gap:5px}
+.tool-box li{font-size:13px;color:var(--ink-soft)}
+
+/* CONTACT */
+#contact{background:#0C0C0F}
+#contact h2,#contact .sec-n{color:#fff}
+#contact .sec-sub{color:rgba(255,255,255,.45)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.avail{display:inline-flex;align-items:center;gap:8px;background:rgba(26,122,74,.25);border:1px solid rgba(26,122,74,.4);padding:9px 14px;border-radius:6px;font-size:13px;color:#5ae08a;font-weight:500;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:#5ae08a;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ct-rows{display:flex;flex-direction:column;gap:14px}
+.ct-row{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,.6)}
+.ct-icon{width:30px;height:30px;border:1px solid rgba(255,255,255,.12);border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.ct-row a{color:var(--gold);text-decoration:none}
+.ct-row a:hover{text-decoration:underline}
+.ct-panel{padding:28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:10px}
+.ct-panel h3{font-family:var(--serif);font-size:20px;color:#fff;font-weight:400;margin-bottom:14px}
+.ct-panel ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.ct-panel li{font-size:13px;color:rgba(255,255,255,.55);padding-left:18px;position:relative;line-height:1.55}
+.ct-panel li::before{content:'→';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
+
+footer{background:#07070A;padding:20px clamp(20px,5vw,80px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer p{font-size:11px;color:rgba(255,255,255,.25);font-family:var(--mono)}
+
+@media(max-width:768px){
+  #hero{grid-template-columns:1fr;padding-top:96px}
+  .xgrid,.proof-grid,.mw-grid,.tl-grid,.tools-g,.ct-grid{grid-template-columns:1fr}
+  .proof-card.wide{grid-column:auto}
+  .wide .pc-body-grid{grid-template-columns:1fr}
+  .wide .pc-body-col{border-right:none;border-bottom:1px solid var(--edge)}
+  .nav-links{display:none}
+  .pc-top{flex-direction:column}
+  section{padding:60px 0}
+  .proj-tabs{width:100%;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="#">OLUWATOBI ADÉBÓYÈ</a>
+  <ul class="nav-links">
+    <li><a href="#expertise">Skills</a></li>
+    <li><a href="#proof">Results</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div>
+    <div class="eyebrow">Senior iGaming SEO Specialist</div>
+    <h1>Ranking betting &amp; gaming brands in the <em>markets that matter</em></h1>
+    <p class="hero-sub">5+ years building search dominance for iGaming operators and affiliates across India, Nigeria, the Philippines, Cyprus, Indonesia, Pakistan and the Netherlands. Technical execution. Off-page authority. Organic traffic that converts to players.</p>
+    <div class="ctas">
+      <a class="btn-dark" href="#proof">See Real Results</a>
+      <a class="btn-out" href="#contact">Get in Touch</a>
+    </div>
+  </div>
+  <div class="stat-panel">
+    <div class="stat">
+      <div class="stat-n">87<b>.7K</b></div>
+      <div class="stat-l">Monthly visits — iGaming card game brand</div>
+      <div class="badge">↑ 63.3K unique visitors</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">DR<b> 62</b></div>
+      <div class="stat-l">Domain Rating — teenpatti.com</div>
+      <div class="badge">208K backlinks · 1.2K domains</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">17<b>.9%</b></div>
+      <div class="stat-l">Avg CTR — iGaming GSC 2025–2026</div>
+      <div class="badge">pos 7.4 avg</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n">20<b>+</b></div>
+      <div class="stat-l">FTDs/week via organic by month 3</div>
+      <div class="badge">↑ player acquisition</div>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">01</div>
+      <div>
+        <h2>Core skills</h2>
+        <p class="sec-sub">Full-stack iGaming SEO — from technical audits and site architecture to off-page authority and AI-driven content.</p>
+      </div>
+    </div>
+    <div class="xgrid">
+      <div class="xcell">
+        <div class="xicon">⚙️</div>
+        <h3>Technical SEO</h3>
+        <p>Full site audits, Core Web Vitals, crawl efficiency, IndexNow implementation, JS rendering, and mobile-first compliance for high-traffic betting properties.</p>
+        <div class="tags"><span class="tag">Screaming Frog</span><span class="tag">GSC</span><span class="tag">CWV</span><span class="tag">Schema</span><span class="tag">IndexNow</span></div>
+      </div>
+      <div class="xcell">
+        <div class="xicon">🔗</div>
+        <h3>Authority & Link Building</h3>
+        <p>Strategic domain portfolio acquisition, backlink profile development, and off-page authority architecture for regulated and competitive iGaming niches.</p>
+        <div class="tags"><span class="tag">Ahrefs</span><span class="tag">Majestic</span><span class="tag">Domain acquisition</span></div>
+      </div>
+      <div class="xcell">
+        <div class="xicon">🎯</div>
+        <h3>iGaming Content Strategy</h3>
+        <p>E-E-A-T frameworks for betting operators and affiliates — keyword research, topical authority, and localised content for Asian and African markets.</p>
+        <div class="tags"><span class="tag">SEMrush</span><span class="tag">Semantic SEO</span><span class="tag">E-E-A-T</span></div>
+      </div>
+      <div class="xcell">
+        <div class="xicon">📈</div>
+        <h3>Affiliate & Operator SEO</h3>
+        <p>Deep understanding of CPA, RevShare, and hybrid deal structures — organic strategy that connects directly to FTD volume for operators and networks.</p>
+        <div class="tags"><span class="tag">FTD optimisation</span><span class="tag">CPA</span><span class="tag">Affiliate SEO</span></div>
+      </div>
+      <div class="xcell">
+        <div class="xicon">🌍</div>
+        <h3>Multi-Market SEO</h3>
+        <p>Operated across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands — adapting strategy to each market's regulatory and cultural context.</p>
+        <div class="tags"><span class="tag">Hreflang</span><span class="tag">Geo-targeting</span><span class="tag">Local SEO</span></div>
+      </div>
+      <div class="xcell">
+        <div class="xicon">🤖</div>
+        <h3>AI & GEO</h3>
+        <p>Generative Engine Optimisation (GEO) — optimising iGaming platforms for visibility in AI search summaries, LLM engines, and ChatGPT citations alongside traditional Google rankings.</p>
+        <div class="tags"><span class="tag">GEO</span><span class="tag">LLM optimisation</span><span class="tag">Jasper AI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">02</div>
+      <div>
+        <h2>Real results</h2>
+        <p class="sec-sub">Screenshots and data from live engagements. Numbers are from Google Search Console, Ahrefs, and Google Analytics.</p>
+      </div>
+    </div>
+
+    <!-- PROJECT TABS -->
+    <div class="proj-tabs">
+      <button class="proj-tab active" onclick="showProject('teenpatti')">teenpatti.com</button>
+      <button class="proj-tab" onclick="showProject('teenpattistars')">Teenpatti Stars</button>
+      <button class="proj-tab" onclick="showProject('trafficbets')">Trafficbets / Uu7stars</button>
+      <button class="proj-tab" onclick="showProject('current')">Current GSC</button>
+    </div>
+
+    <!-- TEENPATTI.COM -->
+    <div class="proj-section active" id="proj-teenpatti">
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">India · Card Game / iGaming · teenpatti.com</div>
+              <h3>teenpatti.com — Traffic Overview</h3>
+              <p>87.7K monthly visits · 63.3K unique visitors · 13:47 avg session</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">87.7K</div><div class="pc-num-l">monthly visits</div></div>
+              <div class="pc-num"><div class="pc-num-n">13:47</div><div class="pc-num-l">avg duration</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="teenpatti-traffic.png" alt="teenpatti.com traffic showing 87.7K visits, 63.3K unique visitors, 6.18 pages/visit and 13:47 avg session duration"></div>
+          <div class="pc-body">
+            <ul>
+              <li>87,700 monthly visits — 63,300 unique visitors with a 33.66% bounce rate (exceptional for iGaming)</li>
+              <li>6.18 pages per visit signals strong content depth and user engagement across the site</li>
+              <li>13:47 average session duration — users are spending significant time on the platform</li>
+              <li>14.6% of traffic from organic search — meaningful SEO contribution alongside strong direct brand traffic</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">India · Card Game / iGaming · Ahrefs</div>
+              <h3>teenpatti.com — Backlink Profile</h3>
+              <p>DR 62 · 208K backlinks · 1.2K linking websites · 99% dofollow</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">DR 62</div><div class="pc-num-l">domain rating</div></div>
+              <div class="pc-num"><div class="pc-num-n">1.2K</div><div class="pc-num-l">ref domains</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="teenpatti-ahrefs.png" alt="Ahrefs showing teenpatti.com with DR 62, 208K backlinks and 1,200 linking websites at 99% dofollow"></div>
+          <div class="pc-body">
+            <ul>
+              <li>DR 62 — highly authoritative domain in the competitive Indian card game and iGaming space</li>
+              <li>208,000 backlinks from 1,200 linking websites — 99% dofollow signals clean, strong link profile</li>
+              <li>Authority at this level takes sustained, methodical off-page strategy to build and maintain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEENPATTISTARS -->
+    <div class="proj-section" id="proj-teenpattistars">
+      <div class="proof-grid">
+        <div class="proof-card">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">Philippines / India · iGaming · GSC 2023</div>
+              <h3>Teenpatti Stars — Search Console Performance</h3>
+              <p>8.6K clicks · 156K impressions · 5.5% CTR · avg position 15.1</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">156K</div><div class="pc-num-l">impressions</div></div>
+              <div class="pc-num"><div class="pc-num-n">5.5%</div><div class="pc-num-l">CTR</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="photo_2023-06-09_13-09-02.jpg" alt="Google Search Console showing 8.6K clicks and 156K impressions for Teenpatti Stars"></div>
+          <div class="pc-body">
+            <ul>
+              <li>8,600 clicks and 156,000 impressions in a single 3-month window (Mar–Jun 2023)</li>
+              <li>Consistent upward trend across both clicks and impressions throughout the period</li>
+              <li>5.5% CTR signals highly optimised title tags and meta descriptions for iGaming SERPs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">India · Rummy / Card Games · Rankings</div>
+              <h3>Teenpatti Stars — Keyword Rankings</h3>
+              <p>Page 1 for "best rummy app" (5.7K vol) · #1 for brand terms</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">#1</div><div class="pc-num-l">teen patti stars</div></div>
+              <div class="pc-num"><div class="pc-num-n">#10</div><div class="pc-num-l">best rummy app</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="photo_2023-06-05_08-41-37.jpg" alt="Google SERP showing Teenpatti Stars ranking on page 1 for teen patti rummy game"></div>
+          <div class="pc-body">
+            <ul>
+              <li>Ranked #1 for "teen patti stars" and "teenpaattistars" — complete brand SERP ownership</li>
+              <li>"best rummy app" — 5,700 monthly searches, ranked position 10, CTR 4.28%</li>
+              <li>"teen patti games" (900 vol, pos 6), "top 10 rummy sites in india" (pos 5), "best rummy game" (800 vol, pos 3)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="proof-card">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">India · Google Analytics · Jun–Jul 2023</div>
+              <h3>Teenpatti Stars — Audience Overview</h3>
+              <p>3,346 users · 4,278 sessions · 88% India traffic</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">3.3K</div><div class="pc-num-l">users / month</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="photo_2023-07-04_17-45-31.jpg" alt="Google Analytics showing 3,346 users and 4,278 sessions with 88% India traffic for Teenpattistars.io"></div>
+          <div class="pc-body">
+            <ul>
+              <li>88% traffic from India — primary target market precisely reached</li>
+              <li>Also drawing from Pakistan, Philippines, and US — organic multi-market reach</li>
+              <li>1:09 avg session duration with engaged, returning iGaming audience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAFFICBETS / UU7STARS -->
+    <div class="proj-section" id="proj-trafficbets">
+      <div class="proof-grid">
+        <div class="proof-card wide">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">Philippines · Trafficbets / Uu7stars · Ahrefs Jan 2026</div>
+              <h3>Trafficbets Network — Rapid Domain Authority Growth</h3>
+              <p>DR 2 → 26 in days for Trafficbets · Uu7stars at DR 47 with 1.1K referring domains</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">DR 47</div><div class="pc-num-l">Uu7stars</div></div>
+              <div class="pc-num"><div class="pc-num-n">1.1K</div><div class="pc-num-l">ref domains</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="Dashboard-Ahrefs-06-20-2026_12_56_PM.png" alt="Ahrefs dashboard showing Trafficbets DR growth and Uu7stars at DR 47 with 1,100 referring domains"></div>
+          <div class="wide pc-body-grid">
+            <div class="pc-body-col">
+              <h4>Trafficbets</h4>
+              <ul class="pc-body" style="padding:0">
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5">DR grew from 2 to 26 within days — rapid authority build via targeted link acquisition campaign</li>
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">235 referring domains established, +140 new domains in the tracked window</li>
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">Projects: Starsuu7, UU7Game, Starsuu7 Real Cash — Teen Patti and Rummy brands targeting India</li>
+              </ul>
+            </div>
+            <div class="pc-body-col">
+              <h4>Uu7stars</h4>
+              <ul class="pc-body" style="padding:0">
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5">DR 47 — well-established iGaming domain authority</li>
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">1,100 referring domains (+118 new) — sustained link acquisition across the engagement</li>
+                <li style="padding-left:14px;font-size:13px;color:var(--ink-soft);position:relative;line-height:1.5;margin-top:7px">Organic traffic and keywords growing actively — player acquisition via organic channel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURRENT GSC -->
+    <div class="proj-section" id="proj-current">
+      <div class="proof-grid">
+        <div class="proof-card wide">
+          <div class="pc-top">
+            <div>
+              <div class="pc-market">iGaming · Active · Oct 2025 – Jun 2026</div>
+              <h3>Current iGaming Project — GSC Performance</h3>
+              <p>5.61K clicks · 31.4K impressions · 17.9% CTR · avg position 7.4</p>
+            </div>
+            <div class="pc-nums">
+              <div class="pc-num"><div class="pc-num-n">17.9%</div><div class="pc-num-l">avg CTR</div></div>
+              <div class="pc-num"><div class="pc-num-n">7.4</div><div class="pc-num-l">avg position</div></div>
+            </div>
+          </div>
+          <div class="pc-img"><img src="Performance-on-Search-results-06-20-2026_02_13_PM.png" alt="Google Search Console showing 5.61K clicks, 31.4K impressions, 17.9% CTR and position 7.4"></div>
+          <div class="pc-body">
+            <ul>
+              <li>17.9% CTR is well above iGaming industry average — a direct result of optimised titles, structured data, and intent-matched meta descriptions</li>
+              <li>Average position 7.4 — consistent first-page presence across all tracked iGaming terms</li>
+              <li>Strong upward trajectory across all four metrics from October 2025 through June 2026</li>
+              <li>5,610 clicks from 31,400 impressions — clean, high-converting organic traffic</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section id="markets" style="background:var(--surface);border-top:1px solid var(--edge)">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">03</div>
+      <div>
+        <h2>Markets worked in</h2>
+        <p class="sec-sub">Every market below is one I've run active SEO campaigns in — not just research.</p>
+      </div>
+    </div>
+    <div class="mw-grid">
+      <div class="mw-card">
+        <div class="mw-flag">🇮🇳</div>
+        <div class="mw-country">India</div>
+        <div class="mw-detail">Rummy, Teen Patti, card game verticals. teenpatti.com (DR 62, 87.7K visits) and Teenpatti Stars (156K GSC impressions).</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇳🇬</div>
+        <div class="mw-country">Nigeria</div>
+        <div class="mw-detail">Sports betting operators. Authority network for Nigerian betting SERPs. 4,934 keywords tracked across competitive betting terms.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇵🇭</div>
+        <div class="mw-country">Philippines</div>
+        <div class="mw-detail">iGaming agency work for Trafficbets. Multiple operator and affiliate brands across Teen Patti and Rummy verticals.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇮🇩</div>
+        <div class="mw-country">Indonesia</div>
+        <div class="mw-detail">Competitive gaming and betting verticals. Organic traffic strategy targeting Indonesian search audience.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇵🇰</div>
+        <div class="mw-country">Pakistan</div>
+        <div class="mw-detail">Card game and iGaming organic traffic. Pakistan was 3rd largest organic source for Teenpattistars.io.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇨🇾</div>
+        <div class="mw-country">Cyprus</div>
+        <div class="mw-detail">Contract with The Search Initiative. Domain acquisition and authority building for European iGaming operators.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🇳🇱</div>
+        <div class="mw-country">Netherlands</div>
+        <div class="mw-detail">European authority-driven SEO campaign across Dutch and European commercial markets.</div>
+      </div>
+      <div class="mw-card">
+        <div class="mw-flag">🌍</div>
+        <div class="mw-country">Kenya · Ghana · S. Africa</div>
+        <div class="mw-detail">African sports betting operators. Content and link strategy for local betting audiences across three markets.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">04</div>
+      <div>
+        <h2>Experience</h2>
+        <p class="sec-sub">7+ years in digital marketing, 5+ focused exclusively on iGaming and betting verticals.</p>
+      </div>
+    </div>
+    <div class="tl-grid">
+      <div class="tl">
+
+        <div class="tl-item">
+          <div class="tl-dot current"></div>
+          <div class="tl-date">JAN 2023 – PRESENT <span class="current-badge"><span class="current-dot"></span>CURRENT</span></div>
+          <div class="tl-role">Senior SEO Consultant — iGaming</div>
+          <div class="tl-co">Independent Practice · Remote — Lagos, Nigeria</div>
+          <ul class="tl-ul">
+            <li>Hands-on SEO lead for betting operators, affiliates, and gaming brands across Nigeria, Kenya, Ghana, and South Africa</li>
+            <li>Full-lifecycle audits, on-page optimisation, and authority building for African market iGaming clients</li>
+            <li>Delivering FTD-linked organic growth through intent-driven content and technical SEO strategy</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">JUN 2025 – JUL 2026</div>
+          <div class="tl-role">AI SEO Lead — Contract</div>
+          <div class="tl-co">Trafficbets · Remote — Philippines</div>
+          <ul class="tl-ul">
+            <li>Led organic growth and search visibility for Trafficbets iGaming brands: Starsuu7, UU7Game, and Starsuu7 Real Cash — all targeting Indian Teen Patti and Rummy players</li>
+            <li>Generative Engine Optimisation (GEO): optimised platform assets for AI search summaries and LLM engines including ChatGPT</li>
+            <li>Off-page authority architecture — grew Uu7stars to DR 47 with 1,100 referring domains</li>
+            <li>17.9% avg CTR and position 7.4 across tracked iGaming keywords in GSC (Oct 2025–Jun 2026)</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="tl">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">OCT 2025 – JUL 2026</div>
+          <div class="tl-role">Authority Network Specialist — Contract</div>
+          <div class="tl-co">The Search Initiative · Remote — Cyprus</div>
+          <ul class="tl-ul">
+            <li>Managed full lifecycle of high-authority domain acquisition and restoration for iGaming clients</li>
+            <li>Built clean backlink ecosystems with topical relevance for regulated operator brands</li>
+            <li>Coordinated with content and technical SEO teams on link structure strategy</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">JUN 2022 – JAN 2024</div>
+          <div class="tl-role">SEO Specialist</div>
+          <div class="tl-co">Trafficbets · Remote — Philippines</div>
+          <ul class="tl-ul">
+            <li>Scaled Teenpatti Stars (teenpattistars.io) from zero to 50,000+ monthly organic visitors</li>
+            <li>Built teenpatti.com to DR 62 with 208K backlinks and 87.7K monthly visits</li>
+            <li>156K GSC impressions and 8.6K clicks in a 3-month window — ranked page 1 for 30+ commercial terms</li>
+            <li>20+ organic FTDs per week by month 3 — proven player acquisition via organic channel</li>
+            <li>Directed team of SEO analysts across content and link acquisition workstreams</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools" style="background:var(--surface);border-top:1px solid var(--edge)">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">05</div>
+      <div>
+        <h2>Tools &amp; stack</h2>
+        <p class="sec-sub">The full toolkit across research, execution, reporting, and domain acquisition.</p>
+      </div>
+    </div>
+    <div class="tools-g">
+      <div class="tool-box">
+        <h4>Analysis</h4>
+        <ul><li>Ahrefs</li><li>SEMrush</li><li>Majestic</li><li>Google Search Console</li><li>Screaming Frog</li><li>Microsoft Clarity</li></ul>
+      </div>
+      <div class="tool-box">
+        <h4>Execution</h4>
+        <ul><li>WordPress</li><li>Schema Markup</li><li>IndexNow</li><li>Jasper AI</li><li>Basic HTML / CSS</li><li>Google Ads / PMax</li></ul>
+      </div>
+      <div class="tool-box">
+        <h4>Reporting</h4>
+        <ul><li>Google Analytics 4</li><li>Looker Studio</li><li>Google Sheets</li><li>Excel</li></ul>
+      </div>
+      <div class="tool-box">
+        <h4>Domain Acquisition</h4>
+        <ul><li>GoDaddy Auctions</li><li>SpamZilla</li><li>DomCop</li><li>Odys Global</li><li>DropCatch / NameJet</li><li>ExpiredDomains.net</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-hd">
+      <div class="sec-n">06</div>
+      <div>
+        <h2>Work together</h2>
+        <p class="sec-sub">Open to senior iGaming SEO roles, contract engagements, and relocation opportunities.</p>
+      </div>
+    </div>
+    <div class="ct-grid">
+      <div>
+        <div class="avail"><div class="dot"></div>Available — open to full-time, contract &amp; relocation</div>
+        <div class="ct-rows">
+          <div class="ct-row"><div class="ct-icon">✉</div><a href="mailto:tbazz4real@gmail.com">tbazz4real@gmail.com</a></div>
+          <div class="ct-row"><div class="ct-icon">📞</div><span>+234 816 6042 531</span></div>
+          <div class="ct-row"><div class="ct-icon">✈</div><a href="https://t.me/Tobeyh" target="_blank" rel="noopener">Telegram: t.me/Tobeyh</a></div>
+          <div class="ct-row"><div class="ct-icon">💼</div><a href="https://linkedin.com/in/oluwatobi-adeboye" target="_blank" rel="noopener">linkedin.com/in/oluwatobi-adeboye</a></div>
+          <div class="ct-row"><div class="ct-icon">📍</div><span>Lagos, Nigeria · Nigerian passport · Open to visa sponsorship</span></div>
+        </div>
+      </div>
+      <div class="ct-panel">
+        <h3>What I bring to a senior role</h3>
+        <ul>
+          <li>5+ years of iGaming-specific SEO — genuine vertical depth across operators, affiliates, and card game brands across 8+ countries</li>
+          <li>Proven player acquisition via organic — 20+ FTDs/week by month 3 is a benchmark I've hit and can hit again</li>
+          <li>Strong authority-building track record — DR 62 on teenpatti.com, DR 47 on Uu7stars, rapid DR growth across new domains</li>
+          <li>GEO-ready — already optimising for AI search and LLM citation visibility, not waiting for the shift to happen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Olúwatóbi Adébóyè · Senior iGaming SEO Specialist</p>
+  <p>Lagos, Nigeria · Open to relocation · tbazz4real@gmail.com</p>
+</footer>
+
+<script>
+function showProject(id) {
+  document.querySelectorAll('.proj-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.proj-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('proj-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
