@@ -42,35 +42,16 @@ h1 em{color:var(--crimson);font-style:italic}
 .hero-ctas{display:flex;gap:12px;margin-top:28px}
 
 /* FEATURED TRAFFIC DASHBOARD */
-.traffic-dash{
-  background:#fff;
-  border:1px solid var(--edge);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 25px 60px -20px rgba(0,0,0,.12);
-}
-.traffic-header{
-  background:#111113;
-  color:#fff;
-  padding:14px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:13px;
-}
+.traffic-dash{background:#fff;border:1px solid var(--edge);border-radius:16px;overflow:hidden;box-shadow:0 25px 60px -20px rgba(0,0,0,.12)}
+.traffic-header{background:#111113;color:#fff;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;font-size:13px}
 .traffic-header .site{font-family:var(--mono);font-weight:600}
-.traffic-header .source{font-size:10px;opacity:.6}
-
 .traffic-main{padding:24px 22px 18px}
 .traffic-main .big{display:flex;align-items:baseline;gap:12px}
 .traffic-main .big .num{font-family:var(--serif);font-size:52px;line-height:1;font-weight:400}
-.traffic-main .big .label{font-size:13px;color:#666}
-
 .traffic-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--edge);margin-top:18px;border-radius:8px;overflow:hidden}
 .traffic-stats .stat{padding:14px 12px;text-align:center;background:#fff}
 .traffic-stats .stat .v{font-family:var(--serif);font-size:19px;font-weight:500}
 .traffic-stats .stat .l{font-size:10px;color:#888;margin-top:2px}
-
 .traffic-sources{padding:20px 22px 22px;border-top:1px solid var(--edge);margin-top:10px}
 .traffic-sources h4{font-size:12px;font-weight:600;margin-bottom:14px;color:#444}
 .src-row{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13px}
@@ -103,13 +84,21 @@ section{padding:90px 0}
 .mw-card{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:20px}
 .mw-card .flag{font-size:22px;margin-bottom:8px}
 
+/* EXPERIENCE - FULL DETAILED VERSION */
 .tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
 .tl{position:relative;padding-left:26px}
 .tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--edge)}
+.tl-item{position:relative;padding-bottom:38px}
+.tl-item:last-child{padding-bottom:0}
 .tl-dot{position:absolute;left:-5px;top:4px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%;background:#fff}
+.tl-dot.now{background:var(--crimson)}
 .tl-date{font-family:var(--mono);font-size:10px;color:var(--ink-muted);margin-bottom:4px}
 .tl-role{font-weight:600}
 .tl-co{color:var(--crimson);font-size:14px;margin:2px 0 10px}
+.tl-ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.tl-ul li{font-size:13px;color:var(--ink-soft);line-height:1.55;padding-left:14px;position:relative}
+.tl-ul li::before{content:'·';position:absolute;left:0;color:var(--crimson);font-size:18px;line-height:1;top:-1px}
+.now-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-dim);color:var(--green);font-size:9px;padding:2px 8px;border-radius:4px;letter-spacing:.08em}
 
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .prof .row{margin-bottom:16px}
@@ -235,11 +224,66 @@ footer .wrap{display:flex;justify-content:space-between}
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- EXPERIENCE - FULL DETAILED -->
 <section id="experience">
   <div class="wrap">
     <div class="sec-hd"><span class="n">04</span><div><h2>Experience</h2></div></div>
-    <div class="tl-grid" id="tlGrid"></div>
+    <div class="tl-grid">
+      <!-- Column 1 -->
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-dot now"></div>
+          <div class="tl-date">JAN 2023 – PRESENT <span class="now-badge">CURRENT</span></div>
+          <div class="tl-role">Senior SEO Consultant — iGaming</div>
+          <div class="tl-co">Independent Practice · Remote — Lagos, Nigeria</div>
+          <ul class="tl-ul">
+            <li>Hands-on SEO lead for betting operators, affiliates and gaming brands across Nigeria, Kenya, Ghana and South Africa</li>
+            <li>Full-lifecycle audits, on-page optimisation and authority building for African market iGaming clients</li>
+            <li>Delivering FTD-linked organic growth through intent-driven content and technical SEO strategy</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">JUN 2025 – JUL 2026</div>
+          <div class="tl-role">AI SEO Lead — Contract</div>
+          <div class="tl-co">Trafficbets · Remote — Philippines</div>
+          <ul class="tl-ul">
+            <li>Led organic growth for Trafficbets iGaming brands: Starsuu7, UU7Game and Starsuu7 Real Cash</li>
+            <li>Generative Engine Optimisation (GEO): optimised assets for AI search summaries and LLM engines</li>
+            <li>Grew Uu7stars to DR 47 with 1,100 referring domains</li>
+            <li>17.9% avg CTR and position 7.4 across tracked iGaming keywords in GSC</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">OCT 2025 – JUL 2026</div>
+          <div class="tl-role">Authority Network Specialist — Contract</div>
+          <div class="tl-co">The Search Initiative · Remote — Cyprus</div>
+          <ul class="tl-ul">
+            <li>Managed full lifecycle of high-authority domain acquisition and restoration for iGaming clients</li>
+            <li>Built clean backlink ecosystems with topical relevance for regulated operator brands</li>
+            <li>Coordinated with content and technical SEO teams on link structure strategy</li>
+          </ul>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-date">JUN 2022 – JAN 2024</div>
+          <div class="tl-role">SEO Specialist</div>
+          <div class="tl-co">Trafficbets · Remote — Philippines</div>
+          <ul class="tl-ul">
+            <li>Scaled Teenpatti Stars (teenpattistars.io) from zero to 50,000+ monthly organic visitors</li>
+            <li>Built teenpatti.com to DR 62 with 208K backlinks and 87.7K monthly visits</li>
+            <li>156K GSC impressions and 8.6K clicks in a 3-month window</li>
+            <li>20+ organic FTDs per week by month 3 — proven player acquisition via organic</li>
+            <li>Directed team of SEO analysts across content and link acquisition workstreams</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -300,7 +344,7 @@ footer .wrap{display:flex;justify-content:space-between}
 </footer>
 
 <script>
-// Tabs + Projects with real images
+// Tabs + Projects
 const PROJECTS = {
   teenpatti: {label:'teenpatti.com', cards:[
     {market:'India · Card Game / iGaming', title:'Traffic Overview', sub:'237.3K monthly visits', img:'teenpatti-traffic.png', bullets:['237,300 monthly visits','50.32% bounce rate','2.44 pages per visit']},
@@ -354,11 +398,6 @@ document.getElementById('marketsGrid').innerHTML = `
 <div class="mw-card"><div class="flag">🇳🇬</div><div class="c">Nigeria</div><div class="d">Sports betting SEO across West Africa</div></div>
 <div class="mw-card"><div class="flag">🇵🇭</div><div class="c">Philippines</div><div class="d">Trafficbets agency work</div></div>
 <div class="mw-card"><div class="flag">🌍</div><div class="c">Kenya · Ghana · S.Africa</div><div class="d">African betting operators</div></div>`;
-
-// Experience
-document.getElementById('tlGrid').innerHTML = `
-<div class="tl"><div class="tl-dot now"></div><div class="tl-date">JAN 2023 – PRESENT <span style="background:#d4f0e3;color:#0f8c4a;padding:1px 6px;border-radius:3px;font-size:9px">CURRENT</span></div><div class="tl-role">Senior SEO Consultant</div><div class="tl-co">Independent Practice · Lagos</div></div>
-<div class="tl"><div class="tl-dot"></div><div class="tl-date">JUN 2022 – JAN 2024</div><div class="tl-role">SEO Specialist</div><div class="tl-co">Trafficbets · Philippines</div></div>`;
 
 // Tools
 document.getElementById('prof').innerHTML = `
