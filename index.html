@@ -4,222 +4,170 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oluwatobi Adébóyè — Senior iGaming SEO Specialist</title>
-<meta name="description" content="Senior iGaming SEO Specialist with 5+ years scaling betting and gaming brands across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper:#fbfaf8; --paper-warm:#f3f1ed; --surface:#ffffff; --surface-2:#f6f5f2;
-  --edge:#e8e5df; --edge-soft:#f1efe9;
-  --ink:#0d0d10; --ink-soft:#34343d; --ink-muted:#71717f; --ink-faint:#a3a3af;
-  --crimson:#e6134c; --crimson-bright:#ff2f6b; --crimson-deep:#b80d3c;
-  --crimson-tint:rgba(230,19,76,.08);
-  --green:#128a4c; --green-bright:#1fae64; --green-dim:rgba(18,138,76,.12);
-  --serif:'DM Serif Display',Georgia,serif;
-  --sans:'Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --paper:#f8f7f4; --surface:#fff; --edge:#e6e3db;
+  --ink:#111113; --ink-soft:#3a3a42; --ink-muted:#6b6b75;
+  --crimson:#e6134c; --green:#0f8c4a;
+  --serif:'DM Serif Display',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2{font-family:var(--serif);font-weight:400}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
-.mono{font-family:var(--mono)}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--crimson)}
-.eyebrow::before{content:'';width:22px;height:2px;background:var(--crimson)}
-nav.top{position:fixed;inset:0 0 auto 0;z-index:100;height:64px;display:flex;align-items:center;transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
-nav.top.scrolled{background:rgba(251,250,248,.86);backdrop-filter:blur(18px) saturate(160%);border-color:var(--edge);box-shadow:0 10px 30px -22px rgba(10,10,12,.25)}
-nav.top .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
-.brand{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.06em}
-.brand b{color:var(--crimson);font-weight:600}
-.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
-.nav-links a{font-size:13px;font-weight:500;color:var(--ink-muted);position:relative;transition:color .2s}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--crimson);transition:width .3s cubic-bezier(.22,1,.36,1)}
-.nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:8px;font-size:13px;font-weight:600;padding:11px 22px;transition:all .25s;cursor:pointer;border:none}
-.btn-primary{background:var(--crimson);color:#fff;position:relative;overflow:hidden}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(230,19,76,.5)}
-.btn-ghost{background:var(--surface);color:var(--ink);border:1px solid var(--edge)}
-.btn-ghost:hover{border-color:var(--crimson);color:var(--crimson);transform:translateY(-2px)}
-.burger{display:none;background:none;border:1px solid var(--edge);border-radius:8px;width:40px;height:40px;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
-.burger span{display:block;width:18px;height:2px;background:var(--ink);transition:.3s}
-#hero{position:relative;padding:150px 0 90px;overflow:hidden}
-#hero .grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(230,19,76,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(230,19,76,.05) 1px,transparent 1px);background-size:52px 52px;mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 25%,transparent 78%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,62px);line-height:1.08;letter-spacing:-.01em;margin:20px 0 22px}
-h1 em{font-style:italic;color:var(--crimson)}
-.hero-sub{font-size:16px;color:var(--ink-soft);max-width:520px;margin-bottom:32px}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
-.marquee{border-block:1px solid var(--edge);background:var(--surface);overflow:hidden;padding:14px 0}
-.marquee-track{display:flex;width:max-content;gap:44px;animation:marquee 32s linear infinite}
-.marquee span{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);display:flex;align-items:center;gap:44px;white-space:nowrap}
-.marquee span::after{content:'✦';color:var(--crimson);font-size:10px}
-@keyframes marquee{to{transform:translateX(-50%)}}
-section{padding:92px 0}
-.sec-hd{display:flex;gap:20px;align-items:flex-start;margin-bottom:52px}
-.sec-hd .n{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--crimson);letter-spacing:.12em;padding-top:7px;min-width:30px}
-.sec-hd h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3vw,42px);line-height:1.15}
-.sec-hd p{color:var(--ink-muted);font-size:15px;margin-top:8px;max-width:560px}
-.alt{background:var(--surface);border-block:1px solid var(--edge)}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:var(--edge);gap:1px}
-.skill{background:var(--surface);padding:30px 26px;transition:background .3s}
-.skill:hover{background:var(--surface-2)}
-.skill .ic{width:42px;height:42px;border-radius:10px;background:var(--crimson-tint);color:var(--crimson);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:all .3s}
-.skill:hover .ic{background:var(--crimson);color:#fff;transform:rotate(-6deg) scale(1.05)}
-.skill h3{font-size:15px;font-weight:600;margin-bottom:8px}
-.skill p{font-size:13px;color:var(--ink-muted);line-height:1.6}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(248,247,244,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--edge);height:68px;display:flex;align-items:center}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;width:100%}
+.brand{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.05em}
+.brand span{color:var(--crimson)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:600;transition:all .25s}
+.btn-primary{background:var(--crimson);color:#fff}
+.btn-primary:hover{box-shadow:0 10px 25px -8px rgba(230,19,76,.5);transform:translateY(-1px)}
+.btn-ghost{background:#fff;border:1px solid var(--edge);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--crimson);color:var(--crimson)}
+
+/* HERO */
+#hero{padding:140px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+h1{font-size:clamp(36px,4.4vw,58px);line-height:1.1;margin:18px 0 24px}
+h1 em{color:var(--crimson);font-style:italic}
+.hero-sub{max-width:520px;color:var(--ink-soft);font-size:15.5px}
+.hero-ctas{display:flex;gap:12px;margin-top:32px}
+
+/* SECTIONS */
+section{padding:90px 0}
+.sec-hd{display:flex;gap:18px;margin-bottom:48px}
+.sec-hd .n{color:var(--crimson);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;padding-top:6px}
+.sec-hd h2{font-size:34px}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:12px;overflow:hidden}
+.skill{background:var(--surface);padding:28px 26px}
+.skill h3{font-size:15px;margin-bottom:8px}
+.skill p{color:var(--ink-soft);font-size:14px;line-height:1.65}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.tag{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);background:var(--paper);border:1px solid var(--edge);padding:3px 8px;border-radius:4px}
-.tabs{display:inline-flex;border:1px solid var(--edge);border-radius:10px;overflow:hidden;background:var(--surface);margin-bottom:32px;max-width:100%;overflow-x:auto}
-.tab{border:none;background:none;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink-muted);padding:11px 22px;cursor:pointer;border-right:1px solid var(--edge);white-space:nowrap;transition:all .2s}
-.tab:last-child{border-right:none}
-.tab.active{background:var(--crimson);color:#fff}
-.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.proj-grid.single{grid-template-columns:1fr}
-.pcard{background:var(--surface);border:1px solid var(--edge);border-radius:12px;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .3s}
-.pcard:hover{transform:translateY(-4px);border-color:rgba(230,19,76,.45);box-shadow:0 24px 48px -28px rgba(230,19,76,.22)}
-.pcard.span2{grid-column:1/-1}
-.pc-top{padding:22px 24px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:flex-start}
-.pc-market{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px}
-.pc-top h3{font-family:var(--serif);font-weight:400;font-size:19px}
-.pc-top .sub{font-size:13px;color:var(--ink-muted);margin-top:4px}
-.pc-nums{display:flex;gap:20px;flex-shrink:0}
-.pc-num{text-align:right}
-.pc-num b{display:block;font-family:var(--serif);font-weight:400;font-size:23px;color:var(--green);line-height:1}
-.pc-num span{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-top:3px;display:block}
-.pc-img{width:100%;border-bottom:1px solid var(--edge);background:var(--paper);overflow:hidden}
-.pc-img img{width:100%;display:block}
-.pc-body{padding:20px 24px}
-.pc-body ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.pc-body li{font-size:13px;color:var(--ink-soft);line-height:1.55;padding-left:18px;position:relative}
-.pc-body li::before{content:'→';position:absolute;left:0;color:var(--crimson);font-size:11px;top:2px}
-.pc-split{display:grid;grid-template-columns:1fr 1fr}
-.pc-split .col{padding:20px 24px;border-right:1px solid var(--edge)}
-.pc-split .col:last-child{border-right:none}
-.pc-split h4{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px}
-.mw{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.mw-card{background:var(--paper);border:1px solid var(--edge);border-radius:10px;padding:20px;transition:all .3s}
-.mw-card:hover{transform:translateY(-4px);border-color:rgba(230,19,76,.45);box-shadow:0 18px 36px -24px rgba(230,19,76,.25)}
-.mw-card .flag{font-size:24px;margin-bottom:10px}
-.mw-card .c{font-size:14px;font-weight:600}
-.mw-card .d{font-size:12.5px;color:var(--ink-muted);line-height:1.5;margin-top:6px}
-.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.tl{position:relative;padding-left:28px}
-.tl::before{content:'';position:absolute;left:0;top:6px;bottom:6px;width:1px;background:linear-gradient(to bottom,var(--crimson) 0%,rgba(230,19,76,.3) 30%,var(--edge) 100%)}
-.tl-item{position:relative;padding-bottom:38px}
-.tl-item:last-child{padding-bottom:0}
-.tl-dot{position:absolute;left:-33px;top:5px;width:11px;height:11px;border-radius:50%;border:2px solid var(--crimson);background:var(--surface)}
-.tl-dot.now{background:var(--crimson)}
-.tl-date{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--ink-muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:5px}
-.now-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-dim);color:var(--green);font-size:9px;padding:2px 8px;border-radius:4px;letter-spacing:.08em}
-.tl-role{font-size:15px;font-weight:600}
-.tl-co{font-size:13px;color:var(--crimson);font-weight:500;margin:2px 0 10px}
-.tl-ul{list-style:none;display:flex;flex-direction:column;gap:6px}
-.tl-ul li{font-size:13px;color:var(--ink-soft);line-height:1.55;padding-left:14px;position:relative}
-.tl-ul li::before{content:'·';position:absolute;left:0;color:var(--crimson);font-size:18px;line-height:1;top:-1px}
-.tools-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-.prof{display:flex;flex-direction:column;gap:18px}
-.prof .row .head{display:flex;justify-content:space-between;font-size:12px;margin-bottom:7px}
-.prof .row .head b{font-weight:500;color:var(--ink-soft)}
-.prof .row .head span{font-family:var(--mono);font-size:11px;color:var(--crimson);font-weight:600}
+.tag{font-family:var(--mono);font-size:9px;padding:2px 8px;border:1px solid var(--edge);border-radius:4px;color:var(--ink-muted)}
+
+/* RESULTS */
+.tabs{display:flex;border:1px solid var(--edge);border-radius:10px;overflow:hidden;width:fit-content;margin-bottom:30px}
+.tab{padding:10px 20px;font-size:13px;font-weight:600;border-right:1px solid var(--edge);background:#fff;color:var(--ink-muted);cursor:pointer}
+.tab.active{background:var(--crimson);color:#fff;border-right:none}
+.pcard{border:1px solid var(--edge);border-radius:12px;overflow:hidden;margin-bottom:22px;background:#fff}
+.pc-top{padding:22px 24px;border-bottom:1px solid var(--edge);display:flex;justify-content:space-between;gap:20px}
+.pc-market{font-family:var(--mono);font-size:10px;color:var(--crimson);font-weight:700;letter-spacing:.1em}
+.pc-top h3{font-size:19px}
+.pc-img img{width:100%;display:block;border-bottom:1px solid var(--edge)}
+.pc-body{padding:22px 24px}
+.pc-body ul{list-style:none}
+.pc-body li{padding-left:18px;position:relative;margin-bottom:8px;font-size:14px;color:var(--ink-soft)}
+.pc-body li::before{content:'→';position:absolute;left:0;color:var(--crimson)}
+
+/* MARKETS */
+.mw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.mw-card{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:20px}
+.mw-card .flag{font-size:22px;margin-bottom:8px}
+
+/* EXPERIENCE */
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.tl{position:relative;padding-left:26px}
+.tl::before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--edge)}
+.tl-dot{position:absolute;left:-5px;top:4px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%;background:#fff}
+.tl-date{font-family:var(--mono);font-size:10px;color:var(--ink-muted);margin-bottom:4px}
+.tl-role{font-weight:600}
+.tl-co{color:var(--crimson);font-size:14px;margin:2px 0 10px}
+
+/* TOOLS */
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.prof .row{margin-bottom:16px}
+.prof .row .head{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}
 .prof .track{height:6px;background:var(--edge);border-radius:99px;overflow:hidden}
-.prof .track i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,rgba(230,19,76,.55),var(--crimson));transition:width 1.2s cubic-bezier(.22,1,.36,1)}
-.mini-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
-.mini-stats .m{background:var(--paper);border:1px solid var(--edge);border-radius:10px;padding:14px 8px;text-align:center}
-.mini-stats .m b{font-family:var(--serif);font-weight:400;font-size:22px;display:block}
-.mini-stats .m span{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
-.tool-groups{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.tg{background:var(--paper);border:1px solid var(--edge);border-radius:12px;padding:22px}
-.tg h4{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--crimson);margin-bottom:14px}
-.tg ul{list-style:none;display:flex;flex-direction:column;gap:7px}
-.tg li{font-size:13px;color:var(--ink-soft);display:flex;align-items:center;gap:9px}
-.tg li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--crimson);flex-shrink:0}
-#contact{background:var(--dark);color:#fff}
-#contact .sec-hd h2{color:#fff}
-#contact .sec-hd p{color:rgba(255,255,255,.45)}
-.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px}
-.avail{display:inline-flex;align-items:center;gap:10px;background:rgba(18,138,76,.18);border:1px solid rgba(31,174,100,.35);color:#5ae08a;font-size:13px;font-weight:500;padding:10px 16px;border-radius:8px;margin-bottom:28px}
-.avail i{width:8px;height:8px;border-radius:50%;background:#5ae08a}
-.ct-rows{display:flex;flex-direction:column;gap:14px}
-.ct-row{display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.6)}
-.ct-row .ic{width:38px;height:38px;border:1px solid rgba(255,255,255,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--crimson-bright);flex-shrink:0}
-.ct-row a{color:#ff7ea1}
-.ct-panel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:30px}
-.ct-panel h3{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:16px}
-.ct-panel ul{list-style:none;display:flex;flex-direction:column;gap:12px}
-.ct-panel li{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6;padding-left:20px;position:relative}
-.ct-panel li::before{content:'→';position:absolute;left:0;color:var(--crimson-bright);font-size:11px;top:2px}
-.ct-panel .btn{width:100%;justify-content:center;margin-top:24px}
-footer{background:#101014;border-top:1px solid rgba(255,255,255,.08);padding:22px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-footer p{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.3)}
-footer a{color:rgba(255,255,255,.5)}
-#toTop{position:fixed;right:24px;bottom:24px;width:44px;height:44px;border-radius:50%;background:var(--surface);border:1px solid var(--edge);color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:90;box-shadow:0 10px 24px -12px rgba(10,10,12,.25)}
-#toTop.show{opacity:1;pointer-events:auto}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.prof .track i{display:block;height:100%;background:var(--crimson);border-radius:99px;transition:width 1.1s ease}
+.mini-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.mini-stats .m{background:#fff;border:1px solid var(--edge);border-radius:10px;padding:14px;text-align:center}
+.mini-stats .m b{font-size:22px;display:block}
+
+/* CONTACT - FIXED CONTRAST */
+#contact{background:#111113;color:#fff}
+#contact h2{color:#fff}
+#contact .sec-hd p{color:#aaa}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.ct-row{display:flex;align-items:center;gap:14px;margin-bottom:14px;font-size:15px}
+.ct-row a{color:#ff8ba3}
+.ct-panel{background:#1a1a1d;border:1px solid #333;border-radius:12px;padding:28px}
+.ct-panel h3{color:#fff;margin-bottom:16px}
+.ct-panel ul{list-style:none}
+.ct-panel li{color:#ccc;margin-bottom:10px;padding-left:18px;position:relative}
+.ct-panel li::before{content:'→';position:absolute;left:0;color:#ff2f6b}
+.ct-panel .btn{width:100%;margin-top:20px;justify-content:center;background:#e6134c;color:#fff}
+
+/* FOOTER */
+footer{background:#111113;color:#666;padding:20px 0;font-size:12px}
+footer .wrap{display:flex;justify-content:space-between}
+
+/* UTILITIES */
+.reveal{opacity:0;transform:translateY(20px);transition:all .6s ease}
 .reveal.visible{opacity:1;transform:none}
-@media(max-width:960px){.hero-grid,.tools-grid,.ct-grid,.tl-grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}.mw{grid-template-columns:1fr 1fr}.proj-grid{grid-template-columns:1fr}.nav-links{display:none}.burger{display:flex}}
-@media(max-width:600px){.skills,.mw,.tool-groups,.pc-split{grid-template-columns:1fr}.pc-split .col{border-right:none;border-bottom:1px solid var(--edge)}.dash-stats{grid-template-columns:1fr 1fr}section{padding:64px 0}}
+@media(max-width:900px){.hero-grid,.tools-grid,.ct-grid,.tl-grid{grid-template-columns:1fr}.nav-links{display:none}}
 </style>
 </head>
 <body>
 
-<nav class="top" id="nav">
+<nav>
   <div class="wrap">
-    <a class="brand" href="#hero">OLUWATOBI <b>ADÉBÓYÈ</b></a>
+    <a class="brand" href="#hero">OLUWATOBI <span>ADÉBÓYÈ</span></a>
     <ul class="nav-links">
       <li><a href="#expertise">Skills</a></li>
       <li><a href="#proof">Results</a></li>
       <li><a href="#markets">Markets</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#tools">Stack</a></li>
-      <li><a class="btn btn-primary" style="padding:9px 18px" href="#contact">Hire me</a></li>
+      <li><a href="#contact" class="btn btn-primary">Hire me</a></li>
     </ul>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="grid-bg"></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">iGaming SEO Specialist &amp; Drop Hunter</span>
+      <span style="color:#e6134c;font-size:12px;font-weight:700;letter-spacing:1px">iGaming SEO Specialist &amp; Drop Hunter</span>
       <h1>Helping sports betting &amp; casino brands <em>dominate emerging markets.</em></h1>
-      <p class="hero-sub">Technical Link Architect with 5+ years building search dominance for operators and affiliates across India, Nigeria, the Philippines, Cyprus, Indonesia, Pakistan and the Netherlands. Technical execution. Off-page authority. Organic traffic that converts to players.</p>
+      <p class="hero-sub">Technical Link Architect with 5+ years building search dominance for iGaming operators and affiliates across India, Nigeria, the Philippines, Cyprus, Indonesia, Pakistan and the Netherlands.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#proof">See real results</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        <a href="#proof" class="btn btn-primary">See real results</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="marquee"><div class="marquee-track"><span>Teen Patti</span><span>Rummy</span><span>iGaming SEO</span><span>Sports Betting</span><span>Affiliate SEO</span><span>GEO / AI Search</span><span>Google Search Console</span><span>Ahrefs</span><span>Domain Authority</span><span>E-E-A-T</span><span>FTD Optimisation</span><span>Multi-Market</span></div></div>
-
 <!-- SKILLS -->
 <section id="expertise" class="alt">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n">01</span><div><h2>Core skills</h2><p>Full-stack iGaming SEO — from technical audits and site architecture to off-page authority and AI-driven content.</p></div></div>
-    <div class="skills reveal">
-      <div class="skill"><div class="ic">⚙️</div><h3>Technical SEO</h3><p>Full site audits, Core Web Vitals, crawl efficiency, IndexNow implementation, JS rendering and mobile-first compliance.</p><div class="tags"><span class="tag">Screaming Frog</span><span class="tag">GSC</span><span class="tag">CWV</span><span class="tag">Schema</span><span class="tag">IndexNow</span></div></div>
-      <div class="skill"><div class="ic">🔗</div><h3>Authority &amp; Link Building</h3><p>Strategic domain portfolio acquisition, backlink profile development and off-page authority architecture.</p><div class="tags"><span class="tag">Ahrefs</span><span class="tag">Majestic</span><span class="tag">Domain acquisition</span></div></div>
-      <div class="skill"><div class="ic">🎯</div><h3>iGaming Content Strategy</h3><p>E-E-A-T frameworks for betting operators and affiliates — keyword research, topical authority and localised content.</p><div class="tags"><span class="tag">SEMrush</span><span class="tag">Semantic SEO</span><span class="tag">E-E-A-T</span></div></div>
-      <div class="skill"><div class="ic">📈</div><h3>Affiliate &amp; Operator SEO</h3><p>Deep understanding of CPA, RevShare and hybrid deal structures — organic strategy that connects directly to FTD volume.</p><div class="tags"><span class="tag">FTD optimisation</span><span class="tag">CPA</span><span class="tag">Affiliate SEO</span></div></div>
-      <div class="skill"><div class="ic">🌍</div><h3>Multi-Market SEO</h3><p>Operated across India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus and the Netherlands.</p><div class="tags"><span class="tag">Hreflang</span><span class="tag">Geo-targeting</span><span class="tag">Local SEO</span></div></div>
-      <div class="skill"><div class="ic">🤖</div><h3>AI &amp; GEO</h3><p>Generative Engine Optimisation — optimising iGaming platforms for AI search summaries and LLM engines.</p><div class="tags"><span class="tag">GEO</span><span class="tag">LLM optimisation</span><span class="tag">Jasper AI</span></div></div>
+    <div class="sec-hd"><span class="n">01</span><div><h2>Core skills</h2></div></div>
+    <div class="skills">
+      <div class="skill"><h3>Technical SEO</h3><p>Full site audits, Core Web Vitals, crawl efficiency, IndexNow, JS rendering.</p></div>
+      <div class="skill"><h3>Authority &amp; Link Building</h3><p>Domain acquisition, backlink strategy, and off-page authority building.</p></div>
+      <div class="skill"><h3>iGaming Content Strategy</h3><p>E-E-A-T frameworks and localised content for Asian and African markets.</p></div>
+      <div class="skill"><h3>Affiliate &amp; Operator SEO</h3><p>CPA, RevShare, and FTD-linked organic growth strategies.</p></div>
+      <div class="skill"><h3>Multi-Market SEO</h3><p>India, Nigeria, Philippines, Indonesia, Pakistan, Cyprus, Netherlands.</p></div>
+      <div class="skill"><h3>AI &amp; GEO</h3><p>Generative Engine Optimisation for AI search and LLM visibility.</p></div>
     </div>
   </div>
 </section>
 
-<!-- RESULTS WITH REAL IMAGES -->
+<!-- RESULTS -->
 <section id="proof">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n">02</span><div><h2>Real results</h2><p>Verified performance data and screenshots from live engagements — Google Search Console, Ahrefs, Google Analytics and SimilarWeb.</p></div></div>
-    
-    <div class="reveal"><div class="tabs" id="tabs"></div></div>
+    <div class="sec-hd"><span class="n">02</span><div><h2>Real results</h2></div></div>
+    <div class="tabs" id="tabs"></div>
     <div id="projBody"></div>
   </div>
 </section>
@@ -227,31 +175,31 @@ footer a{color:rgba(255,255,255,.5)}
 <!-- MARKETS -->
 <section id="markets" class="alt">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n">03</span><div><h2>Markets worked in</h2><p>Every market below is one I've run active SEO campaigns in — not just research.</p></div></div>
-    <div class="mw reveal" id="marketsGrid"></div>
+    <div class="sec-hd"><span class="n">03</span><div><h2>Markets worked in</h2></div></div>
+    <div class="mw-grid" id="marketsGrid"></div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n">04</span><div><h2>Experience</h2><p>7+ years in digital marketing, 5+ focused exclusively on iGaming and betting verticals.</p></div></div>
-    <div class="tl-grid reveal" id="tlGrid"></div>
+    <div class="sec-hd"><span class="n">04</span><div><h2>Experience</h2></div></div>
+    <div class="tl-grid" id="tlGrid"></div>
   </div>
 </section>
 
 <!-- TOOLS -->
 <section id="tools" class="alt">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n">05</span><div><h2>Tools &amp; stack</h2><p>The full toolkit across research, execution, reporting, and domain acquisition.</p></div></div>
-    <div class="tools-grid reveal">
+    <div class="sec-hd"><span class="n">05</span><div><h2>Tools &amp; stack</h2><p style="color:#666;margin-top:8px">The full toolkit across research, execution, reporting, and domain acquisition.</p></div></div>
+    <div class="tools-grid">
       <div>
         <div class="prof" id="prof"></div>
         <div class="mini-stats">
-          <div class="m"><b>7</b><span>yrs digital</span></div>
-          <div class="m"><b>5</b><span>yrs iGaming</span></div>
-          <div class="m"><b>8+</b><span>markets</span></div>
-          <div class="m"><b>30+</b><span>pg-1 terms</span></div>
+          <div class="m"><b>7</b><span style="font-size:10px">yrs digital</span></div>
+          <div class="m"><b>5</b><span style="font-size:10px">yrs iGaming</span></div>
+          <div class="m"><b>8+</b><span style="font-size:10px">markets</span></div>
+          <div class="m"><b>30+</b><span style="font-size:10px">pg-1 terms</span></div>
         </div>
       </div>
       <div class="tool-groups" id="toolGroups"></div>
@@ -262,27 +210,28 @@ footer a{color:rgba(255,255,255,.5)}
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
-    <div class="sec-hd reveal"><span class="n" style="color:#ff7ea1">06</span><div><h2>Work together</h2><p>Open to senior iGaming SEO roles, contract engagements, and relocation opportunities.</p></div></div>
+    <div class="sec-hd"><span class="n" style="color:#ff7ea1">06</span><div><h2>Work together</h2></div></div>
     <div class="ct-grid">
-      <div class="reveal">
-        <div class="avail"><i></i>Available — open to full-time, contract &amp; relocation</div>
-        <div class="ct-rows">
-          <div class="ct-row"><span class="ic">✉</span><a href="mailto:tbazz4real@gmail.com">tbazz4real@gmail.com</a></div>
-          <div class="ct-row"><span class="ic">📞</span><span>+234 816 6042 531</span></div>
-          <div class="ct-row"><span class="ic">✈</span><a href="https://t.me/Tobeyh" target="_blank" rel="noopener">Telegram: t.me/Tobeyh</a></div>
-          <div class="ct-row"><span class="ic">💼</span><a href="https://linkedin.com/in/oluwatobi-adeboye" target="_blank" rel="noopener">linkedin.com/in/oluwatobi-adeboye</a></div>
-          <div class="ct-row"><span class="ic">📍</span><span>Lagos, Nigeria · Nigerian passport · Open to visa sponsorship</span></div>
+      <div>
+        <div style="background:#1f1f23;border:1px solid #333;color:#5ae08a;padding:10px 16px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;margin-bottom:28px">
+          <span style="width:8px;height:8px;background:#5ae08a;border-radius:50%;display:inline-block"></span>
+          Available — open to full-time, contract &amp; relocation
         </div>
+        <div class="ct-row"><span>✉</span> <a href="mailto:tbazz4real@gmail.com">tbazz4real@gmail.com</a></div>
+        <div class="ct-row"><span>📞</span> +234 816 6042 531</div>
+        <div class="ct-row"><span>✈</span> <a href="https://t.me/Tobeyh" target="_blank">Telegram: t.me/Tobeyh</a></div>
+        <div class="ct-row"><span>💼</span> <a href="https://linkedin.com/in/oluwatobi-adeboye" target="_blank">linkedin.com/in/oluwatobi-adeboye</a></div>
+        <div class="ct-row"><span>📍</span> Lagos, Nigeria · Open to visa sponsorship</div>
       </div>
-      <div class="ct-panel reveal">
+      <div class="ct-panel">
         <h3>What I bring to a senior role</h3>
         <ul>
-          <li>5+ years of iGaming-specific SEO — genuine vertical depth across operators, affiliates and card game brands in 8+ countries</li>
-          <li>Proven player acquisition via organic — 20+ FTDs/week by month 3 is a benchmark I've hit and can hit again</li>
-          <li>Authority-building track record — DR 62 on teenpatti.com, DR 47 on Uu7stars, rapid DR growth on new domains</li>
-          <li>GEO-ready — already optimising for AI search and LLM citation visibility</li>
+          <li>5+ years of iGaming-specific SEO across 8+ countries</li>
+          <li>Proven player acquisition — 20+ FTDs/week by month 3</li>
+          <li>DR 62 on teenpatti.com, DR 47 on Uu7stars</li>
+          <li>GEO-ready for AI search and LLM visibility</li>
         </ul>
-        <a class="btn btn-primary" href="mailto:tbazz4real@gmail.com" style="margin-top:24px">Start a conversation</a>
+        <a href="mailto:tbazz4real@gmail.com" class="btn btn-primary">Start a conversation</a>
       </div>
     </div>
   </div>
@@ -290,146 +239,85 @@ footer a{color:rgba(255,255,255,.5)}
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Olúwatóbi Adébóyè · Senior iGaming SEO Specialist</p>
-    <p>Lagos, Nigeria · <a href="mailto:tbazz4real@gmail.com">tbazz4real@gmail.com</a></p>
+    <p>© 2026 Olúwatóbi Adébóyè — Senior iGaming SEO Specialist</p>
+    <p>Lagos, Nigeria · tbazz4real@gmail.com</p>
   </div>
 </footer>
 
-<button id="toTop">↑</button>
-
 <script>
-// Data and rendering script (same as before but with real image support)
+// Tabs + Projects with images
 const PROJECTS = {
-  teenpatti: { label:'teenpatti.com', cards:[
-    { market:'India · Card Game / iGaming', title:'Traffic Overview', sub:'87.7K monthly visits · 63.3K unique visitors · 13:47 avg session',
-      nums:[{n:'87.7K',l:'monthly visits'},{n:'13:47',l:'avg duration'}],
-      img:'teenpatti-traffic.png',
-      bullets:['87,700 monthly visits — 63,300 unique visitors with a 33.66% bounce rate','6.18 pages per visit signals strong content depth and engagement','13:47 average session duration — users spend significant time on the platform'] },
-    { market:'India · Card Game / iGaming · Ahrefs', title:'Backlink Profile', sub:'DR 62 · 208K backlinks · 1.2K linking websites · 99% dofollow',
-      nums:[{n:'DR 62',l:'domain rating'},{n:'1.2K',l:'ref domains'}],
-      img:'teenpatti-ahrefs.png',
-      bullets:['DR 62 — highly authoritative domain in the competitive Indian card game space','208,000 backlinks from 1,200 linking websites — 99% dofollow signals a clean, strong link profile'] },
+  teenpatti: {label:'teenpatti.com', cards:[
+    {market:'India · Card Game / iGaming', title:'Traffic Overview', sub:'87.7K monthly visits', img:'teenpatti-traffic.png', bullets:['87,700 monthly visits','63,300 unique visitors','33.66% bounce rate']},
+    {market:'India · Ahrefs', title:'Backlink Profile', sub:'DR 62 · 208K backlinks', img:'teenpatti-ahrefs.png', bullets:['DR 62 domain rating','1,200 referring domains','99% dofollow links']}
   ]},
-  stars: { label:'Teenpatti Stars', cards:[
-    { market:'Philippines / India · iGaming · GSC 2023', title:'Search Console Performance', sub:'8.6K clicks · 156K impressions · 5.5% CTR',
-      nums:[{n:'156K',l:'impressions'},{n:'5.5%',l:'CTR'}],
-      img:'photo_2023-06-09_13-09-02 (1).jpg',
-      bullets:['8,600 clicks and 156,000 impressions in a single 3-month window (Mar–Jun 2023)'] },
-    { market:'India · Rummy / Card Games · Rankings', title:'Keyword Rankings', sub:'Page 1 for "best rummy app" (5.7K vol) · #1 for brand terms',
-      nums:[{n:'#1',l:'teen patti stars'},{n:'#10',l:'best rummy app'}],
-      img:'photo_2023-06-05_08-41-37.jpg',
-      bullets:['Ranked #1 for "teen patti stars" and "teenpaattistars" — complete brand SERP ownership'] },
-    { market:'India · Google Analytics · Jun–Jul 2023', title:'Audience Overview', sub:'3,346 users · 4,278 sessions · 88% India traffic',
-      nums:[{n:'3.3K',l:'users / month'}],
-      img:'photo_2023-07-04_17-45-31.jpg',
-      bullets:['88% traffic from India — primary target market precisely reached'] },
+  stars: {label:'Teenpatti Stars', cards:[
+    {market:'GSC 2023', title:'Search Console', sub:'156K impressions', img:'photo_2023-06-09_13-09-02 (1).jpg', bullets:['8,600 clicks','5.5% CTR']},
+    {market:'Rankings', title:'Keyword Rankings', sub:'Page 1 for major terms', img:'photo_2023-06-05_08-41-37.jpg', bullets:['#1 for brand terms','#10 for "best rummy app"']},
+    {market:'Analytics', title:'Audience Overview', sub:'3,346 users', img:'photo_2023-07-04_17-45-31.jpg', bullets:['88% traffic from India']}
   ]},
-  trafficbets: { label:'Trafficbets / Uu7stars', cards:[
-    { market:'Philippines · Trafficbets / Uu7stars · Ahrefs Jan 2026', title:'Rapid Domain Authority Growth', sub:'DR 2 → 26 in days for Trafficbets · Uu7stars at DR 47',
-      nums:[{n:'DR 47',l:'Uu7stars'},{n:'1.1K',l:'ref domains'}],
-      img:'Dashboard-Ahrefs-06-20-2026_12_56_PM.png',
-      bullets:['DR grew from 2 to 26 within days — rapid authority build via targeted link acquisition campaign'] },
+  trafficbets: {label:'Trafficbets', cards:[
+    {market:'Ahrefs Jan 2026', title:'Domain Authority Growth', sub:'DR 2 → 26', img:'Dashboard-Ahrefs-06-20-2026_12_56_PM.png', bullets:['Rapid DR growth','1,100+ referring domains']}
   ]},
-  current: { label:'Current GSC', cards:[
-    { market:'iGaming · Active · Oct 2025 – Jun 2026', title:'GSC Performance', sub:'5.61K clicks · 31.4K impressions · 17.9% CTR · avg position 7.4',
-      nums:[{n:'17.9%',l:'avg CTR'},{n:'7.4',l:'avg position'}],
-      img:'Performance-on-Search-results-06-20-2026_02_13_PM.png',
-      bullets:['17.9% CTR is well above the iGaming industry average'] },
-  ]},
+  current: {label:'Current GSC', cards:[
+    {market:'Oct 2025 – Jun 2026', title:'GSC Performance', sub:'17.9% CTR', img:'Performance-on-Search-results-06-20-2026_02_13_PM.png', bullets:['5,610 clicks','Position 7.4 average']}
+  ]}
 };
 
-// Render tabs and cards with images
 function renderProject(id) {
+  const container = document.getElementById('projBody');
   const p = PROJECTS[id];
-  const body = document.getElementById('projBody');
-  let html = `<div class="proj-grid ${p.cards.length===1 ? 'single' : ''}">`;
-  
-  p.cards.forEach((card, i) => {
-    const isWide = p.cards.length === 1 || (p.cards.length % 2 === 1 && i === p.cards.length - 1);
-    html += `<div class="pcard ${isWide ? 'span2' : ''}">
-      <div class="pc-top">
-        <div>
-          <div class="pc-market">${card.market}</div>
-          <h3>${card.title}</h3>
-          <div class="sub">${card.sub}</div>
-        </div>
-        <div class="pc-nums">${card.nums.map(n => `<div class="pc-num"><b>${n.n}</b><span>${n.l}</span></div>`).join('')}</div>
-      </div>`;
-    
-    if (card.img) {
-      html += `<div class="pc-img"><img src="${card.img}" alt="${card.title}"></div>`;
-    }
-    
-    html += `<div class="pc-body"><ul>${card.bullets.map(b => `<li>${b}</li>`).join('')}</ul></div></div>`;
+  let html = `<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">`;
+  p.cards.forEach(card => {
+    html += `<div class="pcard">
+      <div class="pc-top"><div><div class="pc-market">${card.market}</div><h3>${card.title}</h3><div style="color:#666;font-size:13px">${card.sub}</div></div></div>
+      ${card.img ? `<div class="pc-img"><img src="${card.img}" alt=""></div>` : ''}
+      <div class="pc-body"><ul>${card.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+    </div>`;
   });
-  
   html += `</div>`;
-  body.innerHTML = html;
+  container.innerHTML = html;
 }
 
-// Initialize tabs
 function initTabs() {
-  const tabsContainer = document.getElementById('tabs');
-  tabsContainer.innerHTML = Object.keys(PROJECTS).map((key, i) => 
-    `<button class="tab ${i===0?'active':''}" data-id="${key}">${PROJECTS[key].label}</button>`
-  ).join('');
-  
-  tabsContainer.addEventListener('click', e => {
-    const btn = e.target.closest('.tab');
-    if (!btn) return;
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    btn.classList.add('active');
-    renderProject(btn.dataset.id);
-  });
-  
+  const tabs = document.getElementById('tabs');
+  tabs.innerHTML = Object.keys(PROJECTS).map((k,i)=>`<button class="tab ${i===0?'active':''}" data-id="${k}">${PROJECTS[k].label}</button>`).join('');
+  tabs.onclick = e => {
+    if(e.target.classList.contains('tab')){
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      e.target.classList.add('active');
+      renderProject(e.target.dataset.id);
+    }
+  };
   renderProject('teenpatti');
 }
-
 initTabs();
 
-// Basic nav and mobile menu
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 24);
-}, {passive:true});
-
-const burger = document.getElementById('burger');
-const mobileMenu = document.createElement('div');
-mobileMenu.className = 'mobile-menu';
-mobileMenu.innerHTML = `<a href="#expertise">Skills</a><a href="#proof">Results</a><a href="#markets">Markets</a><a href="#experience">Experience</a><a href="#tools">Stack</a><a href="#contact">Contact</a>`;
-document.body.appendChild(mobileMenu);
-
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-});
-
-// Reveal animation
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      io.unobserve(e.target);
-    }
-  });
-}, {threshold: 0.15});
-
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Back to top
-const toTop = document.getElementById('toTop');
-window.addEventListener('scroll', () => {
-  toTop.classList.toggle('show', window.scrollY > 800);
-});
-toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
-// Markets and other sections (simplified for single file)
+// Markets
 document.getElementById('marketsGrid').innerHTML = `
-  <div class="mw-card"><div class="flag">🇮🇳</div><div class="c">India</div><div class="d">Rummy, Teen Patti, card game verticals. teenpatti.com (DR 62, 87.7K visits).</div></div>
-  <div class="mw-card"><div class="flag">🇳🇬</div><div class="c">Nigeria</div><div class="d">Sports betting operators. Authority network for Nigerian betting SERPs.</div></div>
-  <div class="mw-card"><div class="flag">🇵🇭</div><div class="c">Philippines</div><div class="d">iGaming agency work for Trafficbets. Multiple operator and affiliate brands.</div></div>
-  <div class="mw-card"><div class="flag">🇮🇩</div><div class="c">Indonesia</div><div class="d">Competitive gaming and betting verticals. Organic traffic strategy.</div></div>
-`;
+<div class="mw-card"><div class="flag">🇮🇳</div><div class="c">India</div><div class="d">Rummy &amp; Teen Patti. DR 62 on teenpatti.com</div></div>
+<div class="mw-card"><div class="flag">🇳🇬</div><div class="c">Nigeria</div><div class="d">Sports betting SEO across West Africa</div></div>
+<div class="mw-card"><div class="flag">🇵🇭</div><div class="c">Philippines</div><div class="d">Trafficbets agency work</div></div>
+<div class="mw-card"><div class="flag">🌍</div><div class="c">Kenya · Ghana · S.Africa</div><div class="d">African betting operators</div></div>`;
+
+// Experience
+document.getElementById('tlGrid').innerHTML = `
+<div class="tl"><div class="tl-dot now"></div><div class="tl-date">JAN 2023 – PRESENT <span style="background:#d4f0e3;color:#0f8c4a;padding:1px 6px;border-radius:3px;font-size:9px">CURRENT</span></div><div class="tl-role">Senior SEO Consultant</div><div class="tl-co">Independent Practice · Lagos</div></div>
+<div class="tl"><div class="tl-dot"></div><div class="tl-date">JUN 2022 – JAN 2024</div><div class="tl-role">SEO Specialist</div><div class="tl-co">Trafficbets · Philippines</div></div>`;
+
+// Tools
+document.getElementById('prof').innerHTML = `
+<div class="row"><div class="head"><b>Technical SEO</b><span>96%</span></div><div class="track"><i style="width:96%"></i></div></div>
+<div class="row"><div class="head"><b>Link Building</b><span>95%</span></div><div class="track"><i style="width:95%"></i></div></div>
+<div class="row"><div class="head"><b>Content Strategy</b><span>93%</span></div><div class="track"><i style="width:93%"></i></div></div>`;
+
+document.getElementById('toolGroups').innerHTML = `
+<div class="tg"><h4>Analysis</h4><ul><li>Ahrefs</li><li>SEMrush</li><li>GSC</li></ul></div>
+<div class="tg"><h4>Execution</h4><ul><li>WordPress</li><li>Schema</li><li>Jasper AI</li></ul></div>`;
+
+// Reveal
+const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')), {threshold:0.15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
